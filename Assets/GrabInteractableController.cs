@@ -7,13 +7,14 @@ public class GrabInteractableController : MonoBehaviour
     MailboxController mailbox = null;  // Holds the current object's mailbox object
 
     public Transform spawn_position;
-    public Collider object_collider;
+    private List<Collider> object_colliders;
     public Rigidbody object_body;
 
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        foreach(Collider c in gameObject.GetComponents<Collider>()) object_colliders.Add(c);
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class GrabInteractableController : MonoBehaviour
     private void SpawnObject()
     {
         this.gameObject.transform.position = spawn_position.transform.position;
-        object_collider.enabled = true;
+        foreach(Collider c in object_colliders) c.enabled = true;
         object_body.useGravity = true;
     }
 
@@ -60,11 +61,11 @@ public class GrabInteractableController : MonoBehaviour
 
     public void OnGrab()
     {
-        object_collider.isTrigger = true;
+        foreach (Collider c in object_colliders) c.isTrigger = true;
     }
     public void OnDrop()
     {
-        object_collider.isTrigger = false;
+        foreach (Collider c in object_colliders) c.isTrigger = false;
     }
 
 }
