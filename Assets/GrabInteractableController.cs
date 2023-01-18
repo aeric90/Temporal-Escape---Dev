@@ -7,14 +7,14 @@ public class GrabInteractableController : MonoBehaviour
     MailboxController mailbox = null;  // Holds the current object's mailbox object
 
     public Transform spawn_position;
-    private List<Collider> object_colliders;
+    private List<Collider> object_colliders = new List<Collider>();
     public Rigidbody object_body;
 
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
-        foreach(Collider c in gameObject.GetComponents<Collider>()) object_colliders.Add(c);
+        foreach(Collider c in this.gameObject.GetComponentsInChildren<Collider>()) object_colliders.Add(c);
     }
 
     // Update is called once per frame
