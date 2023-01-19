@@ -1,0 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
+
+public class TemporalEscapeController : MonoBehaviour
+{
+    public static TemporalEscapeController instance;
+    public GameObject active_room;
+    public List<GameObject> rooms = new List<GameObject>();
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if(instance == null) instance = this;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void SwitchRoom(string room_name) 
+    {
+        int room_id = 0;
+
+        switch(room_name) {
+            case "Past Room":
+                room_id = 1;
+                break;
+            case "Future Room":
+                room_id = 2;
+                break;
+            default:
+                room_id = 0;
+                break;
+        }
+        
+        StartCoroutine(SwitchRoomRoutine(room_id));
+    }
+
+    IEnumerator SwitchRoomRoutine(int room_id)
+    {
+        FadeController.instance.SetFade(true);
+        yield return new WaitForSeconds(1);
+        active_room.SetActive(false);
+        active_room = rooms[room_id];
+        active_room.SetActive(true);
+        FadeController.instance.SetFade(false);
+    }
+}

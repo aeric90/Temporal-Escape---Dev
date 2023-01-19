@@ -7,18 +7,29 @@ using System;
 
 public class FixedInteractableController : MonoBehaviour
 {
+
     MailboxController mailbox = null;  // Holds the current object's mailbox object
+
+    public Vector3 original_origin;
+    public Transform spawn_position;
 
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        original_origin = this.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (mailbox == null) CheckMailbox();
+        if (mailbox != null) CheckMailbox();
+    }
+
+    private void SpawnObject()
+    {
+        this.gameObject.transform.position = spawn_position.transform.position;
+        this.gameObject.transform.rotation = spawn_position.transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +44,11 @@ public class FixedInteractableController : MonoBehaviour
         }
     }
 
+    private void RemoveObject()
+    {
+        Destroy(this.gameObject);
+    }
+
     private void CheckMailbox()
     {
         MessageObject message = mailbox.Get_Message(); // Get the first message, if any
@@ -43,10 +59,10 @@ public class FixedInteractableController : MonoBehaviour
             switch(message.Get_Message_Tag("Action"))
                 {
                 case "Spawn":
-
+                    SpawnObject();
                     break;
                 case "Remove":
-
+                    RemoveObject();
                     break;
                 default:
                     break;

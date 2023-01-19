@@ -7,6 +7,7 @@ TagManager:
   - GrabInteractable
   - RightTeleportReticle
   - LeftTeleportReticle
+  - Return
   layers:
   - Default
   - TransparentFX

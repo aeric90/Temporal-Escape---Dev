@@ -6,6 +6,8 @@ public class GrabInteractableController : MonoBehaviour
 {
     MailboxController mailbox = null;  // Holds the current object's mailbox object
 
+    public Vector3 original_origin;
+    public Vector3 current_origin;
     public Transform spawn_position;
     private List<Collider> object_colliders = new List<Collider>();
     public Rigidbody object_body;
@@ -14,6 +16,8 @@ public class GrabInteractableController : MonoBehaviour
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        original_origin = this.transform.position;
+        current_origin = original_origin;
         foreach(Collider c in this.gameObject.GetComponentsInChildren<Collider>()) object_colliders.Add(c);
     }
 
@@ -25,6 +29,7 @@ public class GrabInteractableController : MonoBehaviour
 
     private void SpawnObject()
     {
+        current_origin = spawn_position.transform.position;
         this.gameObject.transform.position = spawn_position.transform.position;
         foreach(Collider c in object_colliders) c.enabled = true;
         object_body.useGravity = true;
@@ -68,4 +73,8 @@ public class GrabInteractableController : MonoBehaviour
         foreach (Collider c in object_colliders) c.isTrigger = false;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Return") this.transform.position = current_origin;
+    }
 }

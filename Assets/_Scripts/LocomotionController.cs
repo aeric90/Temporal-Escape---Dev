@@ -14,6 +14,8 @@ public class LocomotionController : MonoBehaviour
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshold = 0.1f;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,11 +50,23 @@ public class LocomotionController : MonoBehaviour
             leftInteractionRay.gameObject.SetActive(true);
             if (leftReticle != null) leftReticle.SetActive(false);
         }
+
+        if (test()) TemporalEscapeController.instance.SwitchRoom("Menu Room");
+
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoof, activationThreshold);
+        if (temporalSpoof) TemporalController.instance.TemporalSpoof();
     }
 
     public bool CheckIfActivated(XRController controller)
     {
         InputHelpers.IsPressed(controller.inputDevice, teleportActivationButton, out bool isActivated, activationThreshold);
         return isActivated;
+    }
+
+    public bool test()
+    {
+        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool isActivatedLeft, activationThreshold);
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool isActivatedRight, activationThreshold);
+        return isActivatedLeft && isActivatedRight;
     }
 }

@@ -69,24 +69,40 @@ public class SequenceManager : MonoBehaviour
     {
         if (trigger.Message_In.Message_Mailbox == message_in.Sender)
         {
-            Add_Flags(trigger.Tags_On); // Add the trigger's on flags
-            Remove_Flags(trigger.Tags_Off); // Remove the trigger's off flags
-
-            if (Check_Required_Flags(trigger.Tags_Required) && Check_Excluded_Flags(trigger.Tags_Excluded))
+            if (Check_Tags(trigger, message_in))
             {
-                foreach (MessageTrigger message in trigger.Messages_Out)
+                if (Check_Required_Flags(trigger.Tags_Required) && Check_Excluded_Flags(trigger.Tags_Excluded))
                 {
-                    MessageObject new_message = new MessageObject(this.name);
-                    foreach (MessageTag tag in message.Message_Tags)
+                    Add_Flags(trigger.Tags_On); // Add the trigger's on flags
+                    Remove_Flags(trigger.Tags_Off); // Remove the trigger's off flags
+
+                    foreach (MessageTrigger message in trigger.Messages_Out)
                     {
-                        new_message.Add_Message_Tag(tag.Message_Tag_Name, tag.Message_Tag_Content);
+                        MessageObject new_message = new MessageObject(this.name);
+                        foreach (MessageTag tag in message.Message_Tags)
+                        {
+                            new_message.Add_Message_Tag(tag.Message_Tag_Name, tag.Message_Tag_Content);
+                        }
+                        new_message.Close_Tags();
+                        new_message.Date_Time = DateTime.Now.ToString();
+                        mailbox.Send_To_Recipient(new_message, message.Message_Mailbox);
                     }
-                    new_message.Close_Tags();
-                    new_message.Date_Time = DateTime.Now.ToString();
-                    mailbox.Send_To_Recipient(new_message, message.Message_Mailbox);
                 }
             }
         }
+    }
+
+    public bool Check_Tags(TriggerObject trigger, MessageObject message)
+    {
+        bool value = true;
+
+        foreach(MessageTag tag in trigger.Message_In.Message_Tags)
+        {
+            if (message.Get_Message_Tag(tag.Message_Tag_Name) != tag.Message_Tag_Content) value = false;
+        }
+
+        Debug.Log(value);
+        return value;
     }
 
     // This function adds the list of flags to the flag list

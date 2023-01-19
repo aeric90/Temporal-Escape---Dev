@@ -16,6 +16,7 @@ public class TriggerObject
     private List<string> tags_excluded = new List<string>();
     private List<string> tags_on = new List<string>(); // The list of status tags that are turned on for this trigger
     private List<string> tags_off = new List<string>(); // The list of status tags that are turned off for this trigger
+    private bool completed;
 
     // CONSTRUCTORS
     // XML serialization requires an empty constructor
@@ -51,6 +52,12 @@ public class TriggerObject
     {
         get { return tags_off; }
         set { tags_off = value; }
+    }
+
+    public bool Completed
+    {
+        get { return completed; }
+        set { completed = value; }
     }
 }
 
