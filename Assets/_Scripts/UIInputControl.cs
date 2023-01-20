@@ -5,26 +5,31 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class UIInputControl : MonoBehaviour
 {
-    public XRController leftInteractionRay;
-    public XRController rightInteractionRay;
+    public static UIInputControl instance;
 
-    public XRController leftUIRay;
-    public XRController righUIRay;
+    public GameObject leftInteractionRay;
+    public GameObject rightInteractionRay;
+    public GameObject leftUIRay;
+    public GameObject righUIRay;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool isActivatedLeft);
-        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool isActivatedRight);
+        if(instance == null) instance = this;
+    }
 
-        if (isActivatedLeft && isActivatedRight)
-        {
-            // Return to menu
-                // Disable interaction, enable UI
-                // Fade Out
-                // Hide current room
-                // Show Menu room
-                // Fade In
-        }
+    public void SetControllersToUI()
+    {
+        leftInteractionRay.SetActive(false);
+        rightInteractionRay.SetActive(false);
+        leftUIRay.SetActive(true);
+        righUIRay.SetActive(true);
+    }
+
+    public void SetControllersToGame()
+    {
+        leftInteractionRay.SetActive(true);
+        rightInteractionRay.SetActive(true);
+        leftUIRay.SetActive(false);
+        righUIRay.SetActive(false);
     }
 }

@@ -101,7 +101,6 @@ public class SequenceManager : MonoBehaviour
             if (message.Get_Message_Tag(tag.Message_Tag_Name) != tag.Message_Tag_Content) value = false;
         }
 
-        Debug.Log(value);
         return value;
     }
 

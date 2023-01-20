@@ -29,12 +29,15 @@ public class TemporalEscapeController : MonoBehaviour
 
         switch(room_name) {
             case "Past Room":
+                UIInputControl.instance.SetControllersToGame();
                 room_id = 1;
                 break;
             case "Future Room":
+                UIInputControl.instance.SetControllersToGame();
                 room_id = 2;
                 break;
             default:
+                UIInputControl.instance.SetControllersToUI();
                 room_id = 0;
                 break;
         }
