@@ -835,6 +835,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 800366902, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
     - target: {fileID: 4040573896551595587, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_IsActive
@@ -845,11 +849,21 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 4040573896551595592, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
     - target: {fileID: 4040573897307135915, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 4040573897307135916, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
     - target: {fileID: 4040573897490093811, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_Name
@@ -920,11 +934,21 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 4040573897603635334, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
     - target: {fileID: 4040573898212452959, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 4040573898212452960, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
     - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_ValidColorGradient.key0.a
@@ -970,6 +994,11 @@ PrefabInstance:
       propertyPath: m_InvalidColorGradient.key1.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6845217444842099491, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
+        type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
     - target: {fileID: 6845217444842099491, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_ControllerNode
