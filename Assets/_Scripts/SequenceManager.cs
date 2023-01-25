@@ -24,8 +24,8 @@ public class SequenceManager : MonoBehaviour
     public static SequenceManager instance;
 
     MailboxController mailbox = null;  // Holds the current object's mailbox object
+    public TextAsset sequence_XML;
 
-    public string sequence_file; // The XML file containing the sequence information
 
     private SequenceContainer sequence_container = new SequenceContainer(); // The container for the sequence's trigger objects
     private List<string> task_flags = new List<string>(); // The list of flags that are currently active for the sequence
@@ -35,7 +35,7 @@ public class SequenceManager : MonoBehaviour
     {
         if (instance == null) instance = this; // Initialize static object instance.
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
-        Import_Sequence(sequence_file);
+        Import_Sequence();
     }
 
     // Update is called once per frame
@@ -167,13 +167,14 @@ public class SequenceManager : MonoBehaviour
     }
 
     // This function imports and deserializes the sequence file into the sequence container
-    public void Import_Sequence(string file_name)
+    public void Import_Sequence()
     {
-        sequence_file = file_name;
         XmlSerializer serializer = new XmlSerializer(sequence_container.GetType());
-        var myFileStream = new FileStream(Application.persistentDataPath + "/" + file_name, FileMode.Open);
-        sequence_container = serializer.Deserialize(myFileStream) as SequenceContainer;
-        myFileStream.Close();
+
+        using (var reader = new StringReader(sequence_XML.text))
+        {
+            sequence_container = serializer.Deserialize(reader) as SequenceContainer;
+        }
     }
 
     public MailboxController GetMailbox()

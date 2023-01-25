@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SequenceContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<trigger_objects>
+		<TriggerObject id="Fixed Interactable Test Used">
+			<Message_In>
+				<Message_Mailbox>Vase</Message_Mailbox>
+				<Message_Tags>
+					<Message_Tag>
+						<Message_Tag_Name>Grab Object</Message_Tag_Name>
+						<Message_Tag_Content>Hammer</Message_Tag_Content>
+					</Message_Tag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Hammer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Vase</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>USB Key</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+	</trigger_objects>
+</SequenceContainer>

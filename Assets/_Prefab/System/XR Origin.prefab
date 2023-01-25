@@ -1556,10 +1556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5898b70e05fe52f4e9c25b3d81549d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftInteractionRay: {fileID: 4040573896551595592}
-  rightInteractionRay: {fileID: 4040573897603635334}
-  leftUIRay: {fileID: 6845217444842099491}
-  righUIRay: {fileID: 800366902}
+  leftInteractionRay: {fileID: 0}
+  rightInteractionRay: {fileID: 0}
+  leftUIRay: {fileID: 0}
+  righUIRay: {fileID: 0}
 --- !u!1 &4040573897603635329
 GameObject:
   m_ObjectHideFlags: 0

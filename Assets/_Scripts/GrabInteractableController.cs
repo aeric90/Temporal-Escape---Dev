@@ -75,6 +75,19 @@ public class GrabInteractableController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Return") this.transform.position = current_origin;
+        if (other.gameObject.tag == "Return")
+        {
+            object_body.velocity = Vector3.zero;
+            this.transform.position = current_origin;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Return")
+        {
+            object_body.velocity = Vector3.zero;
+            this.transform.position = current_origin;
+        }
     }
 }
