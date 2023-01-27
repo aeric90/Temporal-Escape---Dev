@@ -9,6 +9,11 @@ public class FixedInteractableController : MonoBehaviour
 {
 
     MailboxController mailbox = null;  // Holds the current object's mailbox object
+    
+    Animator animator = null;
+    bool animation_trigger = false;
+
+    public GameObject attach_object;
 
     public Vector3 original_origin;
     public Transform spawn_position;
@@ -17,6 +22,7 @@ public class FixedInteractableController : MonoBehaviour
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        animator = this.GetComponent<Animator>();
         original_origin = this.transform.position;
     }
 
@@ -32,6 +38,22 @@ public class FixedInteractableController : MonoBehaviour
         this.gameObject.transform.rotation = spawn_position.transform.rotation;
     }
 
+    private void RemoveObject()
+    {
+        Destroy(this.gameObject);
+    }
+
+    private void AnimateObject()
+    {
+        animation_trigger = !animation_trigger;
+        animator.SetBool("trigger", animation_trigger);
+    }
+
+    private void AttachObject()
+    {
+        attach_object.SetActive(true);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "GrabInteractable")
@@ -42,11 +64,6 @@ public class FixedInteractableController : MonoBehaviour
             new_message.Date_Time = DateTime.Now.ToString();
             mailbox.Send_To_Sequence(new_message);
         }
-    }
-
-    private void RemoveObject()
-    {
-        Destroy(this.gameObject);
     }
 
     private void CheckMailbox()
@@ -63,6 +80,12 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Remove":
                     RemoveObject();
+                    break;
+                case "Animate":
+                    AnimateObject();
+                    break;
+                case "Attach":
+                    AttachObject();
                     break;
                 default:
                     break;

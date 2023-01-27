@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1723170297900556168}
   - component: {fileID: 8993060135962067863}
   - component: {fileID: 575798603581692719}
-  - component: {fileID: 7988367233755096475}
   - component: {fileID: 7962443459889685770}
   m_Layer: 0
   m_Name: Cube
@@ -85,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7988367233755096475
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224751261674774733}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7962443459889685770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,8 +114,9 @@ GameObject:
   - component: {fileID: 7149378237565026481}
   - component: {fileID: 7149378237565026493}
   - component: {fileID: 7149378237565026494}
+  - component: {fileID: 8787521535502177477}
   m_Layer: 3
-  m_Name: Fixed Interactable Prefab
+  m_Name: Fixed Interactable Prefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,3 +177,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original_origin: {x: 0, y: 0, z: 0}
   spawn_position: {fileID: 0}
+--- !u!95 &8787521535502177477
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149378237565026480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
