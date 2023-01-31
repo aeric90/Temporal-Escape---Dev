@@ -322,12 +322,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &541395092 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4040573896551595587, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4040573897405151872}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &622766820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,18 +499,6 @@ MonoBehaviour:
   - {fileID: 1397686327}
   - {fileID: 976990604}
   - {fileID: 1964602097}
---- !u!1 &1129302061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4040573897603635329, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4040573897405151872}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1378236897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 800366897, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4040573897405151872}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1397686326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -730,12 +712,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 4040573897405151872}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2140993972 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7072072592898080078, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4040573897405151872}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4040573897405151872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -743,95 +719,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 23323768, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: leftUIRay
-      value: 
-      objectReference: {fileID: 2140993972}
-    - target: {fileID: 23323768, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23323768, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: righUIRay
-      value: 
-      objectReference: {fileID: 1378236897}
-    - target: {fileID: 23323768, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: leftInteractionRay
-      value: 
-      objectReference: {fileID: 541395092}
-    - target: {fileID: 23323768, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: rightInteractionRay
-      value: 
-      objectReference: {fileID: 1129302061}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key0.a
-      value: 0.49803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key0.g
-      value: 0.5733936
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key0.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.a
-      value: 0.49803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.g
-      value: 0.58431375
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ValidColorGradient.key1.r
-      value: 0.019607844
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 800366899, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 800366901, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
-    - target: {fileID: 800366902, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
-    - target: {fileID: 4040573896551595587, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4040573896551595591, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
-    - target: {fileID: 4040573896551595592, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
     - target: {fileID: 4040573897307135915, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
-    - target: {fileID: 4040573897307135916, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
     - target: {fileID: 4040573897490093811, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_Name
@@ -892,86 +793,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4040573897603635329, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4040573897603635333, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
-    - target: {fileID: 4040573897603635334, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
     - target: {fileID: 4040573898212452959, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
-    - target: {fileID: 4040573898212452960, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.a
-      value: 0.49803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.g
-      value: 0.5733936
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.a
-      value: 0.49803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.g
-      value: 0.58431375
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.r
-      value: 0.019607844
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_InvalidColorGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630727740095687406, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_InvalidColorGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6845217444842099491, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 414912, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
-    - target: {fileID: 6845217444842099491, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: m_ControllerNode
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7931162684931464405, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
