@@ -95,9 +95,10 @@ public class SequenceManager : MonoBehaviour
     public bool Check_Tags(TriggerObject trigger, MessageObject message)
     {
         bool value = true;
-
+        Debug.Log(trigger.Message_In.Message_Tags.Count);
         foreach(MessageTag tag in trigger.Message_In.Message_Tags)
         {
+            Debug.Log(message.Get_Message_Tag(tag.Message_Tag_Name) + " " + tag.Message_Tag_Content);
             if (message.Get_Message_Tag(tag.Message_Tag_Name) != tag.Message_Tag_Content) value = false;
         }
 

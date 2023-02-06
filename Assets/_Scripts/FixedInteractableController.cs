@@ -18,6 +18,9 @@ public class FixedInteractableController : MonoBehaviour
     public Vector3 original_origin;
     public Transform spawn_position;
 
+    public List<Outline> outlines = new List<Outline>();
+    public Collider collider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,14 @@ public class FixedInteractableController : MonoBehaviour
         attach_object.SetActive(true);
     }
 
+    private void DisableObject()
+    {
+        foreach(Outline outline in outlines) { 
+            outline.enabled = false;
+        }
+        collider.enabled = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "GrabInteractable")
@@ -86,6 +97,9 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Attach":
                     AttachObject();
+                    break;
+                case "Disable":
+                    DisableObject();
                     break;
                 default:
                     break;
