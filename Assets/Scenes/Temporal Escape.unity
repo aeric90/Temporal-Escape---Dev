@@ -389,41 +389,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Future Room
       objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
+    - target: {fileID: 7149378237993477733, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
+      propertyPath: m_LocalPosition.x
+      value: -0.48500025
       objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
+    - target: {fileID: 8787521535000277532, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149378237432060114, guid: 61b91d91646ec574b9208e75f413e737,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b84c70609a0939745aa3f282459b3a51, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
 --- !u!1 &765036570 stripped
