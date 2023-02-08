@@ -196,5 +196,71 @@
 				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
+		<TriggerObject id="Temporal Wall Smash">
+			<Message_In>
+				<Message_Mailbox>Temporal Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Temporal Event</Message_Tag_Name>
+						<Message_Tag_Content>Wall Smash</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Painting</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Appear</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Fireplace">
+			<Message_In>
+				<Message_Mailbox>Laptop Lock</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Status</Message_Tag_Name>
+						<Message_Tag_Content>Unlock</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Fireplace</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop Lock</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
 	</trigger_objects>
 </SequenceContainer>

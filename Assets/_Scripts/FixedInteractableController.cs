@@ -37,6 +37,7 @@ public class FixedInteractableController : MonoBehaviour
 
     private void SpawnObject()
     {
+        Debug.Log(gameObject.name + " spawning");
         this.gameObject.transform.position = spawn_position.transform.position;
         this.gameObject.transform.rotation = spawn_position.transform.rotation;
     }
@@ -63,6 +64,11 @@ public class FixedInteractableController : MonoBehaviour
             outline.enabled = false;
         }
         collider.enabled = false;
+    }
+
+    private void AppearObject()
+    {
+        this.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -100,6 +106,9 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Disable":
                     DisableObject();
+                    break;
+                case "Appear":
+                    AppearObject();
                     break;
                 default:
                     break;
