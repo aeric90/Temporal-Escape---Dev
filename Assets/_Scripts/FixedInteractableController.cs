@@ -37,9 +37,9 @@ public class FixedInteractableController : MonoBehaviour
 
     private void SpawnObject()
     {
-        Debug.Log(gameObject.name + " spawning");
         this.gameObject.transform.position = spawn_position.transform.position;
         this.gameObject.transform.rotation = spawn_position.transform.rotation;
+        if (collider != null) collider.enabled = true;
     }
 
     private void RemoveObject()
@@ -49,6 +49,7 @@ public class FixedInteractableController : MonoBehaviour
 
     private void AnimateObject()
     {
+        Debug.Log("Recieve Animate Command " + gameObject.name);
         animation_trigger = !animation_trigger;
         animator.SetBool("trigger", animation_trigger);
     }
@@ -117,5 +118,15 @@ public class FixedInteractableController : MonoBehaviour
             mailbox.Remove_Message(message); // Remove the processed message
             message = mailbox.Get_Message(); // Get the next message, if any
         }
+    }
+
+    public void UseInteraction()
+    {
+        Debug.Log("Sending Use Message " + gameObject.name);
+        MessageObject new_message = new MessageObject(this.name);
+        new_message.Add_Message_Tag("Used", this.gameObject.name);
+        new_message.Close_Tags();
+        new_message.Date_Time = DateTime.Now.ToString();
+        mailbox.Send_To_Sequence(new_message);
     }
 }
