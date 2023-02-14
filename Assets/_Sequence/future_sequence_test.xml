@@ -304,5 +304,123 @@
 				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
+		<TriggerObject id="Access Retinal Scanner - No Eyeball">
+			<Message_In>
+				<Message_Mailbox>Retinal Scanner</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Grab Object</Message_Tag_Name>
+						<Message_Tag_Content>Retinal Scanner ID Card</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Requied />
+			<Tags_Excluded>
+				<string>Eyeball Attached</string>
+			</Tags_Excluded>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Fireplace</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop Lock</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Access Retinal Scanner - With Eyeball">
+			<Message_In>
+				<Message_Mailbox>Retinal Scanner</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Grab Object</Message_Tag_Name>
+						<Message_Tag_Content>Retinal Scanner ID Card</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Requied>
+				<string>Eyeball Attached</string>
+			</Tags_Requied>
+			<Tags_Excluded />
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Retinal Scanner ID Card</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Secret Door</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Trick Retinal Scanner">
+			<Message_In>
+				<Message_Mailbox>Retinal Scanner</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Grab Object</Message_Tag_Name>
+						<Message_Tag_Content>Eyeball In A Jar</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On>
+				<string>Eyeball Attached</string>
+			</Tags_On>
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Retinal Scanner</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Eyeball In A Jar</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
 	</trigger_objects>
 </SequenceContainer>
