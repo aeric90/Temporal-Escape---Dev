@@ -243,6 +243,15 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
+					<Message_Mailbox>Retinal Scanner ID Card</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
 					<Message_Mailbox>Painting</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
