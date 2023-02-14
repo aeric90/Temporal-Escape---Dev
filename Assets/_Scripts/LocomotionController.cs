@@ -53,8 +53,11 @@ public class LocomotionController : MonoBehaviour
 
         if (test()) TemporalEscapeController.instance.SwitchRoom("Menu Room");
 
-        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoof, activationThreshold);
-        if (temporalSpoof) TemporalController.instance.TemporalSpoof();
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
+        if (temporalSpoofA) TemporalController.instance.TemporalSpoof(0);
+
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool temporalSpoofB, activationThreshold);
+        if (temporalSpoofB) TemporalController.instance.TemporalSpoof(1);
     }
 
     public bool CheckIfActivated(XRController controller)

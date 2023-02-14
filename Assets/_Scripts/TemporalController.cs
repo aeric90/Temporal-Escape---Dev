@@ -23,10 +23,18 @@ public class TemporalController : MonoBehaviour
 
     }
 
-    public void TemporalSpoof()
+    public void TemporalSpoof(int code)
     {
         MessageObject new_message = new MessageObject(this.name);
-        new_message.Add_Message_Tag("Temporal Event", "Wall Smash");
+        switch(code)
+        {
+            case 0:
+                new_message.Add_Message_Tag("Temporal Event", "Wall Smash");
+                break;
+            case 1:
+                new_message.Add_Message_Tag("Temporal Event", "Eyeball Send");
+                break;
+        }
         new_message.Close_Tags();
         new_message.Date_Time = DateTime.Now.ToString();
         mailbox.Send_To_Sequence(new_message);
