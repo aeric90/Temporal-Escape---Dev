@@ -9,6 +9,7 @@ public class GrabInteractableController : MonoBehaviour
     public Vector3 original_origin;
     public Vector3 current_origin;
     public Transform spawn_position;
+    public Transform despawn_position;
     private List<Collider> object_colliders = new List<Collider>();
     public Rigidbody object_body;
 
@@ -35,6 +36,14 @@ public class GrabInteractableController : MonoBehaviour
         object_body.useGravity = true;
     }
 
+    private void DespawnObject()
+    {
+        foreach (Collider c in object_colliders) c.enabled = false;
+        object_body.useGravity = false;
+        current_origin = despawn_position.transform.position;
+        this.gameObject.transform.position = despawn_position.transform.position;
+    }
+
     private void RemoveObject()
     {
         Destroy(this.gameObject);
@@ -54,6 +63,9 @@ public class GrabInteractableController : MonoBehaviour
                     break;
                 case "Remove":
                     RemoveObject();
+                    break;
+                case "Despawn":
+                    DespawnObject();
                     break;
                 default:
                     break;

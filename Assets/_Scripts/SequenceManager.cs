@@ -85,6 +85,7 @@ public class SequenceManager : MonoBehaviour
                         }
                         new_message.Close_Tags();
                         new_message.Date_Time = DateTime.Now.ToString();
+                        Debug.Log("Sending message to " + message.Message_Mailbox);
                         mailbox.Send_To_Recipient(new_message, message.Message_Mailbox);
                     }
                 }
@@ -125,9 +126,11 @@ public class SequenceManager : MonoBehaviour
     public bool Check_Required_Flags(List<string> flags_in)
     {
         bool requiredFlags = true;
+        Debug.Log("Checking Required Tags");
 
         foreach (string flag_in in flags_in)
         {
+            Debug.Log("Checking Required Tag - " + flag_in);
             if (!Check_Flag(flag_in)) requiredFlags = false;
         }
 
@@ -137,9 +140,11 @@ public class SequenceManager : MonoBehaviour
     public bool Check_Excluded_Flags(List<string> flags_in)
     {
         bool excludedFlags = true;
+        Debug.Log("Checking Excluded Tags");
 
         foreach (string flag_in in flags_in)
         {
+            Debug.Log("Checking Excluded Tag - " + flag_in);
             if (Check_Flag(flag_in)) excludedFlags = false;
         }
 

@@ -333,6 +333,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137880383, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.88
+      objectReference: {fileID: 0}
     - target: {fileID: 325058812408463530, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
       propertyPath: m_RootOrder
@@ -392,11 +396,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Future Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198002517950754079, guid: 61b91d91646ec574b9208e75f413e737,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3663504591170478769, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}

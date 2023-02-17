@@ -59,12 +59,26 @@ public class FixedInteractableController : MonoBehaviour
         attach_object.SetActive(true);
     }
 
+    private void DetachObject()
+    {
+        attach_object.SetActive(false);
+    }
+
     private void DisableObject()
     {
         foreach(Outline outline in outlines) { 
             outline.enabled = false;
         }
         collider.enabled = false;
+    }
+
+    private void ActivateObject()
+    {
+        foreach (Outline outline in outlines)
+        {
+            outline.enabled = true;
+        }
+        collider.enabled = true;
     }
 
     private void AppearObject()
@@ -105,11 +119,17 @@ public class FixedInteractableController : MonoBehaviour
                 case "Attach":
                     AttachObject();
                     break;
+                case "Detach":
+                    DetachObject();
+                    break;
                 case "Disable":
                     DisableObject();
                     break;
                 case "Appear":
                     AppearObject();
+                    break;
+                case "Activate":
+                    ActivateObject();
                     break;
                 default:
                     break;
