@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Dev Scenes
 /[Aa]ssets/_Dev_Scenes/
+
+#Photon Ignore
+/[Aa]ssets/Photon/

@@ -4,8 +4,9 @@ using UnityEngine;
 using System.Xml.Serialization;
 using System.IO;
 using System;
+using Photon.Pun;
 
-public class TemporalController : MonoBehaviour
+public class TemporalController : MonoBehaviourPun
 {
     public static TemporalController instance;
     MailboxController mailbox = null;  // Holds the current object's mailbox object

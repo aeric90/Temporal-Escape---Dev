@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class FutureRoomController : MonoBehaviour
 {
     MailboxController mailbox = null;  // Holds the current object's mailbox object
     public GameObject teleport_area_2;
 
+    private void Awake()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        Connect();
     }
 
     // Update is called once per frame
@@ -42,6 +49,19 @@ public class FutureRoomController : MonoBehaviour
 
             mailbox.Remove_Message(message); // Remove the processed message
             message = mailbox.Get_Message(); // Get the next message, if any
+        }
+    }
+
+    public void Connect()
+    {
+        if(PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.JoinRandomRoom();
+        }
+        else
+        {
+            PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.GameVersion = "1";
         }
     }
 }
