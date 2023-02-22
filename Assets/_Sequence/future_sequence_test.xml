@@ -15,15 +15,23 @@
 			<Tags_Off />
 			<Messages_Out>
 				<MessageTrigger>
-					<Message_Mailbox>Desk Drawer</Message_Mailbox>
+					<Message_Mailbox>Timer Controller</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Animate</Message_Tag_Content>
+							<Message_Tag_Content>Timer Start</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Desk Drawer Timer</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Duration</Message_Tag_Name>
+							<Message_Tag_Content>1</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
-				</MessageTrigger>
-					<MessageTrigger>
+				</MessageTrigger>				
+				<MessageTrigger>
 					<Message_Mailbox>Desk Drawer</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
@@ -38,24 +46,6 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Disable</Message_Tag_Content>
-						</MessageTag>
-					</Message_Tags>
-				</MessageTrigger>
-				<MessageTrigger>
-					<Message_Mailbox>Hammer</Message_Mailbox>
-					<Message_Tags>
-						<MessageTag>
-							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Spawn</Message_Tag_Content>
-						</MessageTag>
-					</Message_Tags>
-				</MessageTrigger>
-				<MessageTrigger>
-					<Message_Mailbox>Laptop Key</Message_Mailbox>
-					<Message_Tags>
-						<MessageTag>
-							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Spawn</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -77,8 +67,50 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Hammer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop Key</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
+		<TriggerObject id="Drawer Timer Trigger">
+			<Message_In>
+				<Message_Mailbox>Timer Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Timer End</Message_Tag_Name>
+						<Message_Tag_Content>Desk Drawer Timer</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Desk Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>		
 		<TriggerObject id="Vase Smash">
 			<Message_In>
 				<Message_Mailbox>Vase</Message_Mailbox>
@@ -206,6 +238,12 @@
 					</MessageTag>
 				</Message_Tags>
 			</Message_In>
+			<Tags_Excluded>
+				<string>Wall Smashed</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Wall Smashed</string>
+			</Tags_On>
 			<Tags_On />
 			<Tags_Off />
 			<Messages_Out>
@@ -230,8 +268,12 @@
 					</MessageTag>
 				</Message_Tags>
 			</Message_In>
-			<Tags_On />
-			<Tags_Off />
+			<Tags_Excluded>
+				<string>Painting Moved</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Painting Moved</string>
+			</Tags_On>
 			<Messages_Out>
 				<MessageTrigger>
 					<Message_Mailbox>Painting</Message_Mailbox>
@@ -603,6 +645,9 @@
 			<Tags_Required>
 				<string>Clock Drawer Open</string>
 			</Tags_Required>
+			<Tags_Excluded>
+				<string>Eyeball Sent</string>
+			</Tags_Excluded>
 			<Tags_On>
 				<string>Eyeball Sent</string>
 			</Tags_On>
@@ -658,6 +703,7 @@
 			</Message_In>
 			<Tags_Excluded>
 				<string>Clock Drawer Open</string>
+				<string>Eyeball Sent</string>
 			</Tags_Excluded>
 			<Tags_On>
 				<string>Eyeball Sent</string>

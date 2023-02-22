@@ -14,12 +14,14 @@ public class LocomotionController : MonoBehaviour
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshold = 0.1f;
 
+    private TeleportationProvider teleportationProvider;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        teleportationProvider = GetComponentInParent<TeleportationProvider>();
     }
 
     // Update is called once per frame
@@ -28,27 +30,31 @@ public class LocomotionController : MonoBehaviour
         GameObject rightReticle = GameObject.FindWithTag("RightTeleportReticle");
         GameObject leftReticle = GameObject.FindWithTag("LeftTeleportReticle");
 
-        if (CheckIfActivated(rightTeleportRay))
+        if (teleportationProvider.enabled)
         {
-            rightTeleportRay.gameObject.SetActive(true);
-            rightInteractionRay.gameObject.SetActive(false);
-        } else
-        {
-            rightTeleportRay.gameObject.SetActive(false);
-            rightInteractionRay.gameObject.SetActive(true);
-            if (rightReticle != null) rightReticle.SetActive(false);
-        }
+            if (CheckIfActivated(rightTeleportRay))
+            {
+                rightTeleportRay.gameObject.SetActive(true);
+                rightInteractionRay.gameObject.SetActive(false);
+            }
+            else
+            {
+                rightTeleportRay.gameObject.SetActive(false);
+                rightInteractionRay.gameObject.SetActive(true);
+                if (rightReticle != null) rightReticle.SetActive(false);
+            }
 
-        if (CheckIfActivated(leftTeleportRay))
-        {
-            leftTeleportRay.gameObject.SetActive(true);
-            leftInteractionRay.gameObject.SetActive(false);
-        }
-        else
-        {
-            leftTeleportRay.gameObject.SetActive(false);
-            leftInteractionRay.gameObject.SetActive(true);
-            if (leftReticle != null) leftReticle.SetActive(false);
+            if (CheckIfActivated(leftTeleportRay))
+            {
+                leftTeleportRay.gameObject.SetActive(true);
+                leftInteractionRay.gameObject.SetActive(false);
+            }
+            else
+            {
+                leftTeleportRay.gameObject.SetActive(false);
+                leftInteractionRay.gameObject.SetActive(true);
+                if (leftReticle != null) leftReticle.SetActive(false);
+            }
         }
 
         if (test()) TemporalEscapeController.instance.SwitchRoom("Menu Room");
