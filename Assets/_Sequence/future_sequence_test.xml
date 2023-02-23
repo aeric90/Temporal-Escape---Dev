@@ -23,14 +23,31 @@
 						</MessageTag>
 						<MessageTag>
 							<Message_Tag_Name>Name</Message_Tag_Name>
-							<Message_Tag_Content>Desk Drawer Timer</Message_Tag_Content>
+							<Message_Tag_Content>Drawer Spawn Timer</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Duration</Message_Tag_Name>
+							<Message_Tag_Content>0.5</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Timer Controller</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Timer Start</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Drawer Animate Timer</Message_Tag_Content>
 						</MessageTag>
 						<MessageTag>
 							<Message_Tag_Name>Duration</Message_Tag_Name>
 							<Message_Tag_Content>1</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
-				</MessageTrigger>				
+				</MessageTrigger>
 				<MessageTrigger>
 					<Message_Mailbox>Desk Drawer</Message_Mailbox>
 					<Message_Tags>
@@ -67,6 +84,21 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Drawer Spawn Timer">
+			<Message_In>
+				<Message_Mailbox>Timer Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Timer End</Message_Tag_Name>
+						<Message_Tag_Content>Drawer Spawn Timer</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
 				<MessageTrigger>
 					<Message_Mailbox>Hammer</Message_Mailbox>
 					<Message_Tags>
@@ -87,13 +119,13 @@
 				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
-		<TriggerObject id="Drawer Timer Trigger">
+		<TriggerObject id="Drawer Animate Timer">
 			<Message_In>
 				<Message_Mailbox>Timer Controller</Message_Mailbox>
 				<Message_Tags>
 					<MessageTag>
 						<Message_Tag_Name>Timer End</Message_Tag_Name>
-						<Message_Tag_Content>Desk Drawer Timer</Message_Tag_Content>
+						<Message_Tag_Content>Drawer Animate Timer</Message_Tag_Content>
 					</MessageTag>
 				</Message_Tags>
 			</Message_In>
@@ -205,7 +237,12 @@
 					</MessageTag>
 				</Message_Tags>
 			</Message_In>
-			<Tags_On />
+			<Tags_Excluded>
+				<string>Laptop Open</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Laptop Open</string>
+			</Tags_On>
 			<Tags_Off />
 			<Messages_Out>
 				<MessageTrigger>
