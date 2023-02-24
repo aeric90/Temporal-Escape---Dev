@@ -24,10 +24,11 @@ public class TemporalController : MonoBehaviourPun
 
     }
 
-    public void TemporalSpoof(int code)
+    [PunRPC]
+    public void Network_Event(int code)
     {
         MessageObject new_message = new MessageObject(this.name);
-        switch(code)
+        switch (code)
         {
             case 0:
                 new_message.Add_Message_Tag("Temporal Event", "Wall Smash");
