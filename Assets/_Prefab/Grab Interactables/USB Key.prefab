@@ -17,10 +17,10 @@ GameObject:
   - component: {fileID: 2513270599627271957}
   - component: {fileID: 3318641286028329033}
   - component: {fileID: -2517270037817595974}
-  - component: {fileID: 3585571029549438757}
-  m_Layer: 0
+  - component: {fileID: 5030621242013876822}
+  m_Layer: 3
   m_Name: USB Key
-  m_TagString: Untagged
+  m_TagString: GrabInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2562009505580020987}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18, y: 18, z: 18}
+  m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,7 +47,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2562009505580020987}
-  m_Mesh: {fileID: 7518170610628928378, guid: 645f13373f63f3a4bb0eee3fb71808e7, type: 3}
+  m_Mesh: {fileID: 7518170610628928378, guid: 0d44a8ca80728b54abf85fa94e5dec63, type: 3}
 --- !u!23 &4075452419678065966
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!65 &3585571029549438757
+--- !u!65 &5030621242013876822
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,5 +376,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.0036445311, y: 0.00033157828, z: 0.0036704545}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.02642484, y: 0.0021486136, z: 0.009075157}
+  m_Center: {x: -0.0023294338, y: 0.0010745235, z: 0}
