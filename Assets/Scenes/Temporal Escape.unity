@@ -426,6 +426,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Future Room
       objectReference: {fileID: 0}
+    - target: {fileID: 683557605043540918, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: m_Name
+      value: Vase_Model
+      objectReference: {fileID: 0}
     - target: {fileID: 1059790138100449416, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -526,9 +531,24 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.9836
       objectReference: {fileID: 0}
+    - target: {fileID: 7149378238202778130, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: outlines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149378238202778130, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: outlines.Array.data[0]
+      value: 
+      objectReference: {fileID: 1165980185}
     - target: {fileID: 7149378238202778140, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890210794633484854, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7986410141185688415, guid: 61b91d91646ec574b9208e75f413e737,
@@ -637,6 +657,18 @@ MonoBehaviour:
   - {fileID: 1397686327}
   - {fileID: 976990604}
   - {fileID: 1964602097}
+--- !u!114 &1165980185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8192045436457862012, guid: 61b91d91646ec574b9208e75f413e737,
+    type: 3}
+  m_PrefabInstance: {fileID: 622766820}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1397686326
 PrefabInstance:
   m_ObjectHideFlags: 0

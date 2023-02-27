@@ -44,6 +44,7 @@ public class FixedInteractableController : MonoBehaviour
 
     private void RemoveObject()
     {
+        Debug.Log("Recieve Destory Command " + gameObject.name);
         Destroy(this.gameObject);
     }
 
@@ -105,7 +106,9 @@ public class FixedInteractableController : MonoBehaviour
         // Do until there are no messages in the mailbox
         while (message != null)
         {
-            switch(message.Get_Message_Tag("Action"))
+            string messageTag = message.Get_Message_Tag("Action");
+            Debug.Log(gameObject.name + " received message " + messageTag);
+            switch(messageTag)
                 {
                 case "Spawn":
                     SpawnObject();
