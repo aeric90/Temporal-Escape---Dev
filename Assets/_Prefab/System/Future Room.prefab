@@ -1398,7 +1398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055638940798381954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.39, z: 0}
+  m_LocalPosition: {x: 0, y: 6.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1417,8 +1417,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.9128032, b: 0.6462264, a: 1}
-  m_Intensity: 8.3
-  m_Range: 10
+  m_Intensity: 50
+  m_Range: 27.26
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2798,6 +2798,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 325058812408463530}
     m_Modifications:
+    - target: {fileID: 302101548829247331, guid: 7be05fbe0c1a31c448d650677c23d21f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3574052641186530139, guid: 7be05fbe0c1a31c448d650677c23d21f,
         type: 3}
       propertyPath: m_Name
@@ -2805,8 +2810,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3574052641186530139, guid: 7be05fbe0c1a31c448d650677c23d21f,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574052641186530139, guid: 7be05fbe0c1a31c448d650677c23d21f,
+        type: 3}
       propertyPath: m_TagString
       value: GrabInteractable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962722903962895367, guid: 7be05fbe0c1a31c448d650677c23d21f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7818937151293913178, guid: 7be05fbe0c1a31c448d650677c23d21f,
         type: 3}
