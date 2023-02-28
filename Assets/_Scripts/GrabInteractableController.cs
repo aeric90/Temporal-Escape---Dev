@@ -12,6 +12,7 @@ public class GrabInteractableController : MonoBehaviour
     public Transform despawn_position;
     private List<Collider> object_colliders = new List<Collider>();
     public Rigidbody object_body;
+    public GameObject model;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,13 @@ public class GrabInteractableController : MonoBehaviour
     void Update()
     {
         if (mailbox != null) CheckMailbox();
+    }
+
+    private void AppearObject()
+    {
+        model.SetActive(true);
+        foreach (Collider c in object_colliders) c.enabled = true;
+        object_body.useGravity = true;
     }
 
     private void SpawnObject()
@@ -58,6 +66,9 @@ public class GrabInteractableController : MonoBehaviour
         {
             switch (message.Get_Message_Tag("Action"))
             {
+                case "Appear":
+                    AppearObject();
+                    break;
                 case "Spawn":
                     SpawnObject();
                     break;
