@@ -340,6 +340,21 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 140383559053458100, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: outline
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 140383559053458100, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: combineMeshes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 140383559053458100, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: cullBackFaces
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 325058812408463530, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
       propertyPath: m_RootOrder
@@ -400,6 +415,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Future Room
       objectReference: {fileID: 0}
+    - target: {fileID: 2847433966250077185, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847433966250077185, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: constantWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847433966250077185, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 0.18602477
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847433966250077185, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
     - target: {fileID: 3663504591170478769, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -450,6 +485,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7052316168881162635, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052316168881162635, guid: 61b91d91646ec574b9208e75f413e737,
+        type: 3}
+      propertyPath: rmsCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8941791888120319935, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -475,7 +520,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 140383559053458100, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
 --- !u!1 &765036570 stripped
 GameObject:
@@ -495,6 +541,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff765decffc234d89af5f234e5ea28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &795745024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795745026}
+  - component: {fileID: 795745025}
+  m_Layer: 0
+  m_Name: VoiceLogger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &795745025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795745024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86f533fd9917dd4da8601e9eb542c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LogLevel: 2
+--- !u!4 &795745026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795745024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &976990604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 325058812408463531, guid: a6bb7621cb9226d48ba652befc8d2032,
@@ -550,6 +641,171 @@ MonoBehaviour:
   - {fileID: 1397686327}
   - {fileID: 976990604}
   - {fileID: 1964602097}
+--- !u!1 &1084767532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084767535}
+  - component: {fileID: 1084767534}
+  - component: {fileID: 1084767533}
+  - component: {fileID: 1084767536}
+  - component: {fileID: 1084767538}
+  - component: {fileID: 1084767537}
+  m_Layer: 0
+  m_Name: Network Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1084767533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084767532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91175dcc15224463780e01a8a98b1b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceDetection: 0
+  voiceDetectionThreshold: 0.01
+  voiceDetectionDelayMs: 500
+  interestGroup: 0
+  debugEchoMode: 0
+  reliableMode: 0
+  encrypt: 0
+  transmitEnabled: 1
+  samplingRate: 24000
+  frameDuration: 20000
+  bitrate: 30000
+  sourceType: 0
+  microphoneType: 0
+  audioClip: {fileID: 0}
+  loopAudioClip: 1
+  recordingEnabled: 1
+  audioSessionParameters:
+    Category: 4
+    Mode: 0
+    CategoryOptions: 0800000004000000
+  editorAudioSessionPreset: 0
+  androidNativeMicrophoneSettings:
+    AcousticEchoCancellation: 1
+    AutomaticGainControl: 1
+    NoiseSuppression: 1
+  stopRecordingWhenPaused: 0
+  useOnAudioFilterRead: 0
+  useMicrophoneTypeFallback: 1
+  recordWhenJoined: 1
+--- !u!114 &1084767534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084767532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d9debcbaf99472bb70ffc2f99cb23f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisconnectAfterKeepAlive: 0
+  KeepAliveInBackground: 60000
+  ApplyDontDestroyOnLoad: 1
+  runInBackground: 1
+  statsResetInterval: 1000
+  speakerPrefab: {fileID: 4948948601047853322, guid: e972b0bc5e00af4468a5d5ef323cca95,
+    type: 3}
+  primaryRecorder: {fileID: 1084767533}
+  usePrimaryRecorder: 1
+  Settings:
+    AppIdRealtime: 
+    AppIdFusion: 
+    AppIdChat: 
+    AppIdVoice: 
+    AppVersion: 
+    UseNameServer: 1
+    FixedRegion: 
+    Server: 
+    Port: 0
+    ProxyServer: 
+    Protocol: 0
+    EnableProtocolFallback: 1
+    AuthMode: 0
+    EnableLobbyStatistics: 0
+    NetworkLogging: 1
+  ShowSettings: 1
+  AutoConnectAndJoin: 1
+  AutoLeaveAndDisconnect: 1
+  usePunAppSettings: 1
+  usePunAuthValues: 1
+--- !u!4 &1084767535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084767532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084767536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084767532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aac6e8299cfe143b7b0cba65a967c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1084767537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084767532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1084767538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084767532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &1397686326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,11 +1098,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3269510701332223138, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4040573896551595591, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
@@ -927,6 +1178,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 6987435499619105374, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7931162684931464405, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager

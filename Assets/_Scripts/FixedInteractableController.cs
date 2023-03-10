@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Xml.Serialization;
 using System.IO;
 using System;
+using HighlightPlus;
 
 public class FixedInteractableController : MonoBehaviour
 {
@@ -18,8 +19,9 @@ public class FixedInteractableController : MonoBehaviour
     public Vector3 original_origin;
     public Transform spawn_position;
 
-    public List<Outline> outlines = new List<Outline>();
-    public Collider collider;
+    public Collider mainCollider;
+
+    public List<HighlightEffect> effects = new List<HighlightEffect>();
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,7 @@ public class FixedInteractableController : MonoBehaviour
     {
         this.gameObject.transform.position = spawn_position.transform.position;
         this.gameObject.transform.rotation = spawn_position.transform.rotation;
-        if (collider != null) collider.enabled = true;
+        if (mainCollider != null) mainCollider.enabled = true;
     }
 
     private void RemoveObject()
@@ -67,19 +69,19 @@ public class FixedInteractableController : MonoBehaviour
 
     private void DisableObject()
     {
-        foreach(Outline outline in outlines) { 
-            outline.enabled = false;
+        foreach(HighlightEffect effect in effects) {
+            effect.highlighted = false;
         }
-        collider.enabled = false;
+        mainCollider.enabled = false;
     }
 
     private void ActivateObject()
     {
-        foreach (Outline outline in outlines)
+        foreach (HighlightEffect effect in effects)
         {
-            outline.enabled = true;
+            effect.highlighted = true;
         }
-        collider.enabled = true;
+        mainCollider.enabled = true;
     }
 
     private void AppearObject()
