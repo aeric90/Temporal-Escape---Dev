@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: -4059283665735063701}
   - component: {fileID: -402215208818052560}
   m_Layer: 0
-  m_Name: Lore Item Prefab
+  m_Name: Past Lore Item Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
