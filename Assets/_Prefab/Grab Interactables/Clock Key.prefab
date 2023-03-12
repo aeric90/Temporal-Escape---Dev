@@ -473,7 +473,7 @@ MonoBehaviour:
   overlayTextureScale: 1
   outline: 1
   outlineColor: {r: 0, g: 0.13491154, b: 1, a: 1}
-  outlineWidth: 0.2
+  outlineWidth: 0.1
   outlineQuality: 0
   outlineDownsampling: 2
   outlineVisibility: 0
