@@ -1,6 +1,8 @@
+using HighlightPlus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GrabInteractableController : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class GrabInteractableController : MonoBehaviour
     private List<Collider> object_colliders = new List<Collider>();
     public Rigidbody object_body;
     public GameObject model;
+    public List<HighlightEffect> effects = new List<HighlightEffect>();
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,13 @@ public class GrabInteractableController : MonoBehaviour
         this.gameObject.transform.position = despawn_position.transform.position;
     }
 
+    private void DisableObject()
+    {
+        object_body.constraints = RigidbodyConstraints.FreezeAll;
+        foreach (HighlightEffect effect in effects) effect.highlighted = false;
+        GetComponent<XRGrabInteractable>().enabled = false;
+    }
+
     private void RemoveObject()
     {
         Destroy(this.gameObject);
@@ -77,6 +87,9 @@ public class GrabInteractableController : MonoBehaviour
                     break;
                 case "Despawn":
                     DespawnObject();
+                    break;
+                case "Disable":
+                    DisableObject();
                     break;
                 default:
                     break;

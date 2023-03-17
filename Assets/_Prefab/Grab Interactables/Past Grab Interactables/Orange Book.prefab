@@ -243,6 +243,8 @@ MonoBehaviour:
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
   model: {fileID: 7574812928008928017}
+  effects:
+  - {fileID: 5303969579063025427}
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
