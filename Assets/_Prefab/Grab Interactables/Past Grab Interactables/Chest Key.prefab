@@ -224,6 +224,7 @@ MonoBehaviour:
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
   model: {fileID: 6677823483515674289}
+  effects: []
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +481,7 @@ MonoBehaviour:
   outline: 1
   outlineColor: {r: 0, g: 0.13491154, b: 1, a: 1}
   outlineWidth: 0.2
-  outlineQuality: 0
+  outlineQuality: 1
   outlineDownsampling: 2
   outlineVisibility: 0
   glowBlendMode: 0

@@ -15,6 +15,7 @@ public class FixedInteractableController : MonoBehaviour
     bool animation_trigger = false;
 
     public GameObject attach_object;
+    public List<GameObject> attach_objects = new List<GameObject>();
 
     public Vector3 original_origin;
     public Transform spawn_position;
@@ -62,9 +63,32 @@ public class FixedInteractableController : MonoBehaviour
         attach_object.SetActive(true);
     }
 
+    private void AttachObject(string name)
+    {
+        foreach (GameObject attachObject in attach_objects)
+        {
+            if (attachObject.name == name)
+            {
+                attachObject.SetActive(true);
+                break;
+            }
+        }
+    }
+
     private void DetachObject()
     {
         attach_object.SetActive(false);
+    }
+
+    private void DetachObject(string name)
+    {
+        foreach(GameObject attachObject in attach_objects) {
+            if (attachObject.name == name)
+            {
+                attachObject.SetActive(false);
+                break;
+            }
+        }
     }
 
     private void DisableObject()
@@ -123,6 +147,7 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Attach":
                     AttachObject();
+                    AttachObject(message.Get_Message_Tag("Name"));
                     break;
                 case "Detach":
                     DetachObject();

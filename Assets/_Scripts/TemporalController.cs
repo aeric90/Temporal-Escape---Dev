@@ -21,7 +21,33 @@ public class TemporalController : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        if (mailbox != null) CheckMailbox();
+    }
 
+    private void CheckMailbox()
+    {
+        MessageObject message = mailbox.Get_Message(); // Get the first message, if any
+
+        // Do until there are no messages in the mailbox
+        while (message != null)
+        {
+            string messageTag = message.Get_Message_Tag("Temporal Action");
+            Debug.Log(gameObject.name + " received message " + messageTag);
+            switch (messageTag)
+            {
+                case "Wall Smash":
+                    Network_Event(0);
+                    break;
+                case "Eyeball Send":
+                    Network_Event(1);
+                    break;
+                default:
+                    break;
+            }
+
+            mailbox.Remove_Message(message); // Remove the processed message
+            message = mailbox.Get_Message(); // Get the next message, if any
+        }
     }
 
     [PunRPC]
