@@ -65,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.23683017, z: 0.15}
-  m_Center: {x: 0, y: 0.00057336316, z: 0}
+  m_Size: {x: 0.09689126, y: 0.14453979, z: 0.09795338}
+  m_Center: {x: -0.00035405532, y: -0.04557183, z: 0.00017699599}
 --- !u!114 &7986410142503633204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +224,7 @@ MonoBehaviour:
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
   model: {fileID: 0}
+  effects: []
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0

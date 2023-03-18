@@ -38,9 +38,9 @@ public class ClockLockController : MonoBehaviour
 
     private bool CheckLock()
     {
-        bool checkLock = true;
+        bool checkLock = false;
 
-        
+        if (lock_button_text.text == lock_answer) checkLock = true;
 
         return checkLock;
     }

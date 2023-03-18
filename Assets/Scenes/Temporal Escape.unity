@@ -266,50 +266,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Past Room
       objectReference: {fileID: 0}
-    - target: {fileID: 325058812408463531, guid: a6bb7621cb9226d48ba652befc8d2032,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4291576900378000726, guid: a6bb7621cb9226d48ba652befc8d2032,
         type: 3}
       propertyPath: sceneViewId
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4360217980711019764, guid: a6bb7621cb9226d48ba652befc8d2032,
+    - target: {fileID: 4628917437772739210, guid: a6bb7621cb9226d48ba652befc8d2032,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628917437772739210, guid: a6bb7621cb9226d48ba652befc8d2032,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.077
+      value: -11
       objectReference: {fileID: 0}
-    - target: {fileID: 5237460784984562640, guid: a6bb7621cb9226d48ba652befc8d2032,
+    - target: {fileID: 4628917437772739210, guid: a6bb7621cb9226d48ba652befc8d2032,
         type: 3}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5237460784984562640, guid: a6bb7621cb9226d48ba652befc8d2032,
+    - target: {fileID: 4647610530268628182, guid: a6bb7621cb9226d48ba652befc8d2032,
         type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+      propertyPath: attach_objects.Array.size
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5237460784984562640, guid: a6bb7621cb9226d48ba652befc8d2032,
+    - target: {fileID: 4647610530268628182, guid: a6bb7621cb9226d48ba652befc8d2032,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
+      propertyPath: attach_objects.Array.data[1]
+      value: 
+      objectReference: {fileID: 639512874}
+    - target: {fileID: 6765339924595459739, guid: a6bb7621cb9226d48ba652befc8d2032,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5237460784984562640, guid: a6bb7621cb9226d48ba652befc8d2032,
+    - target: {fileID: 8229253087256815284, guid: a6bb7621cb9226d48ba652befc8d2032,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5887217350794875105, guid: a6bb7621cb9226d48ba652befc8d2032,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.043
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149378236419236532, guid: a6bb7621cb9226d48ba652befc8d2032,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.935
+      propertyPath: m_Name
+      value: Eyeball In A Jar Attach
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6bb7621cb9226d48ba652befc8d2032, type: 3}
@@ -367,10 +362,6 @@ PrefabInstance:
     - target: {fileID: 622766822, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
       propertyPath: sceneViewId
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2145502569, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
-      propertyPath: m_Name
-      value: Future Secret Door
       objectReference: {fileID: 0}
     - target: {fileID: 325058812408463530, guid: 61b91d91646ec574b9208e75f413e737,
         type: 3}
@@ -439,6 +430,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b91d91646ec574b9208e75f413e737, type: 3}
+--- !u!1 &639512874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8229253087256815284, guid: a6bb7621cb9226d48ba652befc8d2032,
+    type: 3}
+  m_PrefabInstance: {fileID: 372042722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &795745024
 GameObject:
   m_ObjectHideFlags: 0

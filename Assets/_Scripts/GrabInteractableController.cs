@@ -1,4 +1,5 @@
 using HighlightPlus;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,6 +42,7 @@ public class GrabInteractableController : MonoBehaviour
 
     private void SpawnObject()
     {
+        Debug.Log("Recieve Spawn Command " + gameObject.name);
         current_origin = spawn_position.transform.position;
         this.gameObject.transform.position = spawn_position.transform.position;
         foreach(Collider c in object_colliders) c.enabled = true;
@@ -74,6 +76,7 @@ public class GrabInteractableController : MonoBehaviour
         // Do until there are no messages in the mailbox
         while (message != null)
         {
+            Debug.Log("Recieved Message " + gameObject.name);
             switch (message.Get_Message_Tag("Action"))
             {
                 case "Appear":
@@ -103,6 +106,11 @@ public class GrabInteractableController : MonoBehaviour
     public void OnGrab()
     {
         foreach (Collider c in object_colliders) c.isTrigger = true;
+        MessageObject new_message = new MessageObject(this.name);
+        new_message.Add_Message_Tag("Picked Up", this.gameObject.name);
+        new_message.Close_Tags();
+        new_message.Date_Time = DateTime.Now.ToString();
+        mailbox.Send_To_Sequence(new_message);
     }
     public void OnDrop()
     {

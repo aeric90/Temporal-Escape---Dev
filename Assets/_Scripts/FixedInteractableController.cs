@@ -132,6 +132,7 @@ public class FixedInteractableController : MonoBehaviour
         // Do until there are no messages in the mailbox
         while (message != null)
         {
+            string name = "";
             string messageTag = message.Get_Message_Tag("Action");
             Debug.Log(gameObject.name + " received message " + messageTag);
             switch(messageTag)
@@ -146,11 +147,26 @@ public class FixedInteractableController : MonoBehaviour
                     AnimateObject();
                     break;
                 case "Attach":
-                    AttachObject();
-                    AttachObject(message.Get_Message_Tag("Name"));
+                    name = message.Get_Message_Tag("Name");
+                    if (name != null)
+                    {
+                        AttachObject(name);
+                    }
+                    else
+                    {
+                        AttachObject();
+                    }                   
                     break;
                 case "Detach":
-                    DetachObject();
+                    name = message.Get_Message_Tag("Name");
+                    if (name != null)
+                    {
+                        DetachObject(name);
+                    }
+                    else
+                    {
+                        DetachObject();
+                    }
                     break;
                 case "Disable":
                     DisableObject();

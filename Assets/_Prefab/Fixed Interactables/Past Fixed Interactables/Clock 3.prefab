@@ -275,7 +275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4153a983157cd0a498933fb521217564, type: 2}
+  - {fileID: 2100000, guid: ed45ed17afa04994b92bc959aca00ef7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 2397417653390313762}
   - component: {fileID: 1339674204874245258}
   m_Layer: 5
-  m_Name: Clock Lock 1
+  m_Name: Clock Lock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,7 +823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7098296705505638654}
   m_Layer: 3
-  m_Name: Attached Strange Object 1
+  m_Name: Attached Strange Object 3
   m_TagString: GrabInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 8787521535502177477}
   - component: {fileID: -2815455815361489786}
   m_Layer: 3
-  m_Name: Clock 1
+  m_Name: Clock 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
