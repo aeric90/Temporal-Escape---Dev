@@ -47,6 +47,34 @@
 			</MessageTrigger>
 		  </Messages_Out>
 		</TriggerObject>
+		<TriggerObject id="Pick Up Key">
+			<Message_In>
+				<Message_Mailbox>Chest Key</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Pick Up</Message_Tag_Name>
+						<Message_Tag_Content>Chest Key</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Excluded>
+				<string>Key Pick Up</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Key Pick Up</string>
+			</Tags_On>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Temporal Controller</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Temporal Action</Message_Tag_Name>
+							<Message_Tag_Content>Key Pick Up</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
 		<TriggerObject id="Unlock Chest">
 		  <Message_In>
 			<Message_Mailbox>Chest</Message_Mailbox>

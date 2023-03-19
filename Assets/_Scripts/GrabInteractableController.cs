@@ -17,6 +17,7 @@ public class GrabInteractableController : MonoBehaviour
     public Rigidbody object_body;
     public GameObject model;
     public List<HighlightEffect> effects = new List<HighlightEffect>();
+    private bool firstPickUp = false;
 
     // Start is called before the first frame update
     void Start()
@@ -106,11 +107,15 @@ public class GrabInteractableController : MonoBehaviour
     public void OnGrab()
     {
         foreach (Collider c in object_colliders) c.isTrigger = true;
-        MessageObject new_message = new MessageObject(this.name);
-        new_message.Add_Message_Tag("Picked Up", this.gameObject.name);
-        new_message.Close_Tags();
-        new_message.Date_Time = DateTime.Now.ToString();
-        mailbox.Send_To_Sequence(new_message);
+        if (firstPickUp == false)
+        {
+            MessageObject new_message = new MessageObject(this.name);
+            new_message.Add_Message_Tag("Pick Up", this.gameObject.name);
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+            firstPickUp = true;
+        }
     }
     public void OnDrop()
     {

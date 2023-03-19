@@ -32,17 +32,11 @@ public class TemporalController : MonoBehaviourPun
         while (message != null)
         {
             string messageTag = message.Get_Message_Tag("Temporal Action");
-            Debug.Log(gameObject.name + " received message " + messageTag);
-            switch (messageTag)
+
+            if (messageTag != null)
             {
-                case "Wall Smash":
-                    Network_Event(0);
-                    break;
-                case "Eyeball Send":
-                    Network_Event(1);
-                    break;
-                default:
-                    break;
+                Debug.Log(gameObject.name + " received message " + messageTag);
+                Network_Event(messageTag);
             }
 
             mailbox.Remove_Message(message); // Remove the processed message
@@ -51,18 +45,10 @@ public class TemporalController : MonoBehaviourPun
     }
 
     [PunRPC]
-    public void Network_Event(int code)
+    public void Network_Event(string name)
     {
         MessageObject new_message = new MessageObject(this.name);
-        switch (code)
-        {
-            case 0:
-                new_message.Add_Message_Tag("Temporal Event", "Wall Smash");
-                break;
-            case 1:
-                new_message.Add_Message_Tag("Temporal Event", "Eyeball Send");
-                break;
-        }
+        new_message.Add_Message_Tag("Temporal Event", name);
         new_message.Close_Tags();
         new_message.Date_Time = DateTime.Now.ToString();
         mailbox.Send_To_Sequence(new_message);
