@@ -1,43 +1,706 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SequenceContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<trigger_objects>
-		<TriggerObject id="Fixed Interactable Test Used">
+		<TriggerObject id="Rug Activate">
+		  <Message_In>
+			<Message_Mailbox>Rug</Message_Mailbox>
+			<Message_Tags>
+			  <MessageTag>
+				<Message_Tag_Name>Used</Message_Tag_Name>
+				<Message_Tag_Content>Rug</Message_Tag_Content>
+			  </MessageTag>
+			</Message_Tags>
+		  </Message_In>
+		  <Tags_Excluded>
+			<string>Rug Moved</string>
+		  </Tags_Excluded>
+		  <Tags_On>
+			<string>Rug Moved</string>
+		  </Tags_On>
+		  <Messages_Out>
+			<MessageTrigger>
+			  <Message_Mailbox>Rug</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Animate</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Chest Key</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Rug</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Disable</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+		  </Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Pick Up Key">
 			<Message_In>
-				<Message_Mailbox>Vase</Message_Mailbox>
+				<Message_Mailbox>Chest Key</Message_Mailbox>
 				<Message_Tags>
-					<Message_Tag>
+					<MessageTag>
+						<Message_Tag_Name>Pick Up</Message_Tag_Name>
+						<Message_Tag_Content>Chest Key</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Excluded>
+				<string>Key Pick Up</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Key Pick Up</string>
+			</Tags_On>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Temporal Controller</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Temporal Action</Message_Tag_Name>
+							<Message_Tag_Content>Key Pick Up</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Chest">
+		  <Message_In>
+			<Message_Mailbox>Chest</Message_Mailbox>
+			<Message_Tags>
+			  <MessageTag>
+				<Message_Tag_Name>Grab Object</Message_Tag_Name>
+				<Message_Tag_Content>Chest Key</Message_Tag_Content>
+			  </MessageTag>
+			</Message_Tags>
+		  </Message_In>
+		  <Messages_Out>
+			<MessageTrigger>
+			  <Message_Mailbox>Chest</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Animate</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			  <MessageTrigger>
+				  <Message_Mailbox>Chest</Message_Mailbox>
+				  <Message_Tags>
+					  <MessageTag>
+						  <Message_Tag_Name>Action</Message_Tag_Name>
+						  <Message_Tag_Content>Disable</Message_Tag_Content>
+					  </MessageTag>
+				  </Message_Tags>
+			  </MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Chest Key</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Remove</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Hammer</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Purple Book</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Blue Book</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+		  </Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Open Clock Drawer">
+			<Message_In>
+				<Message_Mailbox>Clock Drawer</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
 						<Message_Tag_Name>Grab Object</Message_Tag_Name>
-						<Message_Tag_Content>Hammer</Message_Tag_Content>
-					</Message_Tag>
+						<Message_Tag_Content>Clock Key</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Excluded>
+				<string>Clock Drawer Open</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Clock Drawer Open</string>
+			</Tags_On>
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Clock Key Attach</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Key</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Fireplace">
+			<Message_In>
+				<Message_Mailbox>Book Lock</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Status</Message_Tag_Name>
+						<Message_Tag_Content>Unlock</Message_Tag_Content>
+					</MessageTag>
 				</Message_Tags>
 			</Message_In>
 			<Tags_On />
 			<Tags_Off />
 			<Messages_Out>
 				<MessageTrigger>
-					<Message_Mailbox>Hammer</Message_Mailbox>
+					<Message_Mailbox>Fireplace</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Remove</Message_Tag_Content>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
-					<Message_Mailbox>Vase</Message_Mailbox>
+					<Message_Mailbox>Book Lock</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Remove</Message_Tag_Content>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
-					<Message_Mailbox>USB Key</Message_Mailbox>
+					<Message_Mailbox>White Book</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Green Book</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Yellow Book</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Purple Book</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Blue Book</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Past Room</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Expand</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Open Secret Room">
+			<Message_In>
+				<Message_Mailbox>Secret Door Lock</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Status</Message_Tag_Name>
+						<Message_Tag_Content>Unlock</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Required />
+			<Tags_Excluded />
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Secret Door Lock</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Strange Object 1</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Strange Object 2</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Strange Object 3</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Past Secret Door</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Eyeball In A Jar</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Wall Smash">
+		  <Message_In>
+			<Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+			<Message_Tags>
+			  <MessageTag>
+				<Message_Tag_Name>Grab Object</Message_Tag_Name>
+				<Message_Tag_Content>Hammer</Message_Tag_Content>
+			  </MessageTag>
+			</Message_Tags>
+		  </Message_In>
+		  <Tags_Excluded>
+			<string>Wall Smashed</string>
+		  </Tags_Excluded>
+		  <Tags_On>
+			<string>Wall Smashed</string>
+		  </Tags_On>
+		  <Tags_On />
+		  <Tags_Off />
+		  <Messages_Out>
+			<MessageTrigger>
+			  <Message_Mailbox>Desk Key</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Hammer</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Remove</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Remove</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Past Smashed Wall Placeholder</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Temporal Controller</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Temporal Action</Message_Tag_Name>
+				  <Message_Tag_Content>Wall Smash</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+		  </Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Desk">
+		  <Message_In>
+			<Message_Mailbox>Desk Drawer</Message_Mailbox>
+			<Message_Tags>
+			  <MessageTag>
+				<Message_Tag_Name>Grab Object</Message_Tag_Name>
+				<Message_Tag_Content>Desk Key</Message_Tag_Content>
+			  </MessageTag>
+			</Message_Tags>
+		  </Message_In>
+		  <Messages_Out>
+			<MessageTrigger>
+			  <Message_Mailbox>Desk Drawer</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Animate</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Desk Drawer</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Disable</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Desk Key</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Remove</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Yellow Book</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Green Book</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+		  </Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Clock 1">
+		  <Message_In>
+			<Message_Mailbox>Clock Lock 1</Message_Mailbox>
+			<Message_Tags>
+			  <MessageTag>
+				<Message_Tag_Name>Status</Message_Tag_Name>
+				<Message_Tag_Content>Unlock</Message_Tag_Content>
+			  </MessageTag>
+			</Message_Tags>
+		  </Message_In>
+		  <Tags_On />
+		  <Tags_Off />
+		  <Messages_Out>
+			 <MessageTrigger>
+			  <Message_Mailbox>Clock 1</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Disable</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Clock Lock 1</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Disable</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Clock 1</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Detach</Message_Tag_Content>
+				</MessageTag>
+				<MessageTag>
+				  <Message_Tag_Name>Name</Message_Tag_Name>
+				  <Message_Tag_Content>Attached Strange Object 1</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
+			  <Message_Mailbox>Strange Object 1</Message_Mailbox>
+			  <Message_Tags>
+				<MessageTag>
+				  <Message_Tag_Name>Action</Message_Tag_Name>
+				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				</MessageTag>
+			  </Message_Tags>
+			</MessageTrigger>
+		  </Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Clock 2">
+			<Message_In>
+				<Message_Mailbox>Clock Lock 2</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Status</Message_Tag_Name>
+						<Message_Tag_Content>Unlock</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Clock 2</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Lock 2</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock 2</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Detach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Attached Strange Object 2</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Strange Object 2</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Unlock Clock 3">
+			<Message_In>
+				<Message_Mailbox>Clock Lock 3</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Status</Message_Tag_Name>
+						<Message_Tag_Content>Unlock</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Clock 3</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Lock 3</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock 3</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Detach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Attached Strange Object 3</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Strange Object 3</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Send Eyeball">
+			<Message_In>
+				<Message_Mailbox>Clock Drawer</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Grab Object</Message_Tag_Name>
+						<Message_Tag_Content>Eyeball In A Jar</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Required>
+				<string>Clock Drawer Open</string>
+			</Tags_Required>
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Eyeball In A Jar Attach</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Eyeball In A Jar</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Temporal Controller</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Temporal Action</Message_Tag_Name>
+							<Message_Tag_Content>Eyeball Send</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>

@@ -27,7 +27,7 @@
 						</MessageTag>
 						<MessageTag>
 							<Message_Tag_Name>Duration</Message_Tag_Name>
-							<Message_Tag_Content>0.75</Message_Tag_Content>
+							<Message_Tag_Content>2.0</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -44,7 +44,7 @@
 						</MessageTag>
 						<MessageTag>
 							<Message_Tag_Name>Duration</Message_Tag_Name>
-							<Message_Tag_Content>1</Message_Tag_Content>
+							<Message_Tag_Content>2.0</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -446,6 +446,15 @@
 			<Tags_On />
 			<Tags_Off />
 			<Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Retinal Scanner</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Disable</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 				<MessageTrigger>
 					<Message_Mailbox>Retinal Scanner ID Card</Message_Mailbox>
 					<Message_Tags>

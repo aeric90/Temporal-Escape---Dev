@@ -8,6 +8,8 @@ TagManager:
   - RightTeleportReticle
   - LeftTeleportReticle
   - Return
+  - BookSocket
+  - StrangeSocket
   layers:
   - Default
   - TransparentFX

@@ -27,8 +27,11 @@ public class MailboxController : MonoBehaviour
             if(mailbox != null)
             {
                 mailbox.Deliver_Message(outgoing_message); // Add the message to the mailbox
+            } else
+            {
+                Debug.Log(recipient_name + " has no mailbox");
             }
-        }
+        } 
     }
 
     public void Send_To_Sequence(MessageObject outgoing_message)

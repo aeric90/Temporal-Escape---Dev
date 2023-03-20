@@ -1,6 +1,9 @@
+using HighlightPlus;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GrabInteractableController : MonoBehaviour
 {
@@ -13,6 +16,8 @@ public class GrabInteractableController : MonoBehaviour
     private List<Collider> object_colliders = new List<Collider>();
     public Rigidbody object_body;
     public GameObject model;
+    public List<HighlightEffect> effects = new List<HighlightEffect>();
+    private bool firstPickUp = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +43,7 @@ public class GrabInteractableController : MonoBehaviour
 
     private void SpawnObject()
     {
+        Debug.Log("Recieve Spawn Command " + gameObject.name);
         current_origin = spawn_position.transform.position;
         this.gameObject.transform.position = spawn_position.transform.position;
         foreach(Collider c in object_colliders) c.enabled = true;
@@ -52,6 +58,13 @@ public class GrabInteractableController : MonoBehaviour
         this.gameObject.transform.position = despawn_position.transform.position;
     }
 
+    private void DisableObject()
+    {
+        object_body.constraints = RigidbodyConstraints.FreezeAll;
+        foreach (HighlightEffect effect in effects) effect.highlighted = false;
+        GetComponent<XRGrabInteractable>().enabled = false;
+    }
+
     private void RemoveObject()
     {
         Destroy(this.gameObject);
@@ -64,6 +77,7 @@ public class GrabInteractableController : MonoBehaviour
         // Do until there are no messages in the mailbox
         while (message != null)
         {
+            Debug.Log("Recieved Message " + gameObject.name);
             switch (message.Get_Message_Tag("Action"))
             {
                 case "Appear":
@@ -78,6 +92,9 @@ public class GrabInteractableController : MonoBehaviour
                 case "Despawn":
                     DespawnObject();
                     break;
+                case "Disable":
+                    DisableObject();
+                    break;
                 default:
                     break;
             }
@@ -90,6 +107,15 @@ public class GrabInteractableController : MonoBehaviour
     public void OnGrab()
     {
         foreach (Collider c in object_colliders) c.isTrigger = true;
+        if (firstPickUp == false)
+        {
+            MessageObject new_message = new MessageObject(this.name);
+            new_message.Add_Message_Tag("Pick Up", this.gameObject.name);
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+            firstPickUp = true;
+        }
     }
     public void OnDrop()
     {

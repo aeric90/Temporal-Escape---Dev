@@ -13,4 +13,9 @@ public class MenuUIController : MonoBehaviour
     {
         TemporalEscapeController.instance.SwitchRoom("Future Room");
     }
+
+    public void OnQuitClick()
+    {
+        Application.Quit();
+    }
 }
