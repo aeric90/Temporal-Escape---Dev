@@ -205,6 +205,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Attach</Message_Tag_Content>
 						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>USB Key</Message_Tag_Content>
+						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -251,6 +255,19 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Lock Key</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -544,6 +561,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Attach</Message_Tag_Content>
 						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Clock Key Attach</Message_Tag_Content>
+						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -599,6 +620,10 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Clock Key Attach</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -664,6 +689,10 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Clock Key Attach</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -741,6 +770,10 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Detach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Clock Key Attach</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
