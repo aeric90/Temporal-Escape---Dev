@@ -9,7 +9,6 @@ public class DeskLockController : MonoBehaviour
     MailboxController mailbox = null;
 
     public Canvas lock_canvas;
-    private bool unlocked = false;
 
     public List<GameObject> deskLockButtons = new List<GameObject>();
     public List<Material> deskLockButtonOffMats = new List<Material>();
@@ -50,7 +49,6 @@ public class DeskLockController : MonoBehaviour
     {
         if(checkLock())
         {
-            unlocked = true;
             lockOpenButton.GetComponent<MeshRenderer>().material = lockOpenMat;
             MessageObject new_message = new MessageObject(this.name);
             new_message.Add_Message_Tag("Status", "Unlock");
