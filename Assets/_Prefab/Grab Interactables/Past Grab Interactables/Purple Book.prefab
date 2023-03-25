@@ -243,9 +243,9 @@ MonoBehaviour:
   spawn_position: {fileID: 0}
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
-  model: {fileID: 0}
+  model: {fileID: 5633954495004246031}
   effects:
-  - {fileID: 0}
+  - {fileID: 3320266010017289177}
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
