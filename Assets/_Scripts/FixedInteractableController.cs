@@ -14,7 +14,7 @@ public class FixedInteractableController : MonoBehaviour
     Animator animator = null;
     bool animation_trigger = false;
 
-    public GameObject attach_object;
+    public GameObject attach_object_old;
     public List<GameObject> attach_objects = new List<GameObject>();
 
     public Vector3 original_origin;
@@ -64,13 +64,14 @@ public class FixedInteractableController : MonoBehaviour
 
     private void AttachObject()
     {
-        attach_object.SetActive(true);
+        attach_object_old.SetActive(true);
     }
 
     private void AttachObject(string name)
     {
+        Debug.Log("Recieve Attach Command " + gameObject.name + " For " + name);
         foreach (GameObject attachObject in attach_objects)
-        {
+        {   
             if (attachObject.name == name)
             {
                 attachObject.SetActive(true);
@@ -81,7 +82,7 @@ public class FixedInteractableController : MonoBehaviour
 
     private void DetachObject()
     {
-        attach_object.SetActive(false);
+        attach_object_old.SetActive(false);
     }
 
     private void DetachObject(string name)
@@ -166,7 +167,7 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Attach":
                     name = message.Get_Message_Tag("Name");
-                    if (name != null)
+                    if (name != "")
                     {
                         AttachObject(name);
                     }
@@ -177,7 +178,7 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Detach":
                     name = message.Get_Message_Tag("Name");
-                    if (name != null)
+                    if (name != "")
                     {
                         DetachObject(name);
                     }
@@ -197,7 +198,7 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Sound":
                     name = message.Get_Message_Tag("Name");
-                    if (name != null) PlaySound(name);
+                    if (name != "") PlaySound(name);
                     break;
                 default:
                     break;
