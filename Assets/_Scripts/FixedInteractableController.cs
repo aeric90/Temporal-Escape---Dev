@@ -24,11 +24,15 @@ public class FixedInteractableController : MonoBehaviour
 
     public List<HighlightEffect> effects = new List<HighlightEffect>();
 
+    private AudioSource fixedAudioSource = null;
+    public List<AudioClip> eventSounds = new List<AudioClip>(); 
+
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
         animator = this.GetComponent<Animator>();
+        fixedAudioSource = this.GetComponent<AudioSource>();
         original_origin = this.transform.position;
     }
 
@@ -113,6 +117,20 @@ public class FixedInteractableController : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
+    private void PlaySound(string name)
+    {
+        if (fixedAudioSource != null) {
+            foreach (AudioClip eventSound in eventSounds)
+            {
+                if (eventSound.name == name)
+                {
+                    fixedAudioSource.PlayOneShot(eventSound);
+                    break;
+                }
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "GrabInteractable")
@@ -176,6 +194,10 @@ public class FixedInteractableController : MonoBehaviour
                     break;
                 case "Activate":
                     ActivateObject();
+                    break;
+                case "Sound":
+                    name = message.Get_Message_Tag("Name");
+                    if (name != null) PlaySound(name);
                     break;
                 default:
                     break;

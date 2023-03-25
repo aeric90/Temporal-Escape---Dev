@@ -69,6 +69,8 @@ MonoBehaviour:
   mainCollider: {fileID: 2575681454806473747}
   effects:
   - {fileID: 7808100141342012682}
+  eventSounds:
+  - {fileID: 8300000, guid: 6c33cf8ed339b9549b897e22afa7037d, type: 3}
 --- !u!95 &8787521535502177477
 Animator:
   serializedVersion: 5
