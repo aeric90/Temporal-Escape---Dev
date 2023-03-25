@@ -245,6 +245,8 @@ MonoBehaviour:
   model: {fileID: 3119967607316227649}
   effects:
   - {fileID: 1321620653610391248}
+  pickUpSound: {fileID: 8300000, guid: 5f894b41b0bf7be4697dc3cfeb3ce05c, type: 3}
+  dropSound: {fileID: 8300000, guid: 89e9a17f68ea16c46a1d7aa7f3e7f31e, type: 3}
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0

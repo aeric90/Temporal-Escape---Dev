@@ -243,9 +243,11 @@ MonoBehaviour:
   spawn_position: {fileID: 0}
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
-  model: {fileID: 7986410142503633202}
+  model: {fileID: 1939171630225980701}
   effects:
   - {fileID: 1084696229192980911}
+  pickUpSound: {fileID: 8300000, guid: 5f894b41b0bf7be4697dc3cfeb3ce05c, type: 3}
+  dropSound: {fileID: 8300000, guid: 89e9a17f68ea16c46a1d7aa7f3e7f31e, type: 3}
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
