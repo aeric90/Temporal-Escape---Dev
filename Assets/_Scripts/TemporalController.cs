@@ -36,7 +36,7 @@ public class TemporalController : MonoBehaviourPun
             if (messageTag != null)
             {
                 Debug.Log(gameObject.name + " received message " + messageTag);
-                Network_Event(messageTag);
+                photonView.RPC("Network_Event", RpcTarget.AllBuffered, messageTag);
             }
 
             mailbox.Remove_Message(message); // Remove the processed message

@@ -484,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6887070402139231387
 Transform:
   m_ObjectHideFlags: 0
@@ -572,7 +572,8 @@ MonoBehaviour:
   spawn_position: {fileID: 0}
   mainCollider: {fileID: 7890210793422570072}
   effects:
-  - {fileID: 0}
+  - {fileID: 5621550930520014277}
+  - {fileID: 8482795399917021970}
 --- !u!95 &2909918127272225135
 Animator:
   serializedVersion: 5

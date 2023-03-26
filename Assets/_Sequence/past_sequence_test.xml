@@ -28,6 +28,19 @@
 			  </Message_Tags>
 			</MessageTrigger>
 			<MessageTrigger>
+				<Message_Mailbox>Rug</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Action</Message_Tag_Name>
+						<Message_Tag_Content>Sound</Message_Tag_Content>
+					</MessageTag>
+					<MessageTag>
+						<Message_Tag_Name>Name</Message_Tag_Name>
+						<Message_Tag_Content>RugMove</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</MessageTrigger>
+			<MessageTrigger>
 			  <Message_Mailbox>Chest Key</Message_Mailbox>
 			  <Message_Tags>
 				<MessageTag>
@@ -46,6 +59,47 @@
 			  </Message_Tags>
 			</MessageTrigger>
 		  </Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Lamp On">
+			<Message_In>
+				<Message_Mailbox>Lamp</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Used</Message_Tag_Name>
+						<Message_Tag_Content>Lamp</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Excluded>
+				<string>Lamp On</string>
+			</Tags_Excluded>
+			<Tags_On>
+				<string>Lamp On</string>
+			</Tags_On>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Symbol</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Lamp</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Pick Up Key">
 			<Message_In>
@@ -95,15 +149,15 @@
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
-			  <MessageTrigger>
-				  <Message_Mailbox>Chest</Message_Mailbox>
-				  <Message_Tags>
-					  <MessageTag>
-						  <Message_Tag_Name>Action</Message_Tag_Name>
-						  <Message_Tag_Content>Disable</Message_Tag_Content>
-					  </MessageTag>
-				  </Message_Tags>
-			  </MessageTrigger>
+			<MessageTrigger>
+				<Message_Mailbox>Chest</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Action</Message_Tag_Name>
+						<Message_Tag_Content>Disable</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Chest Key</Message_Mailbox>
 			  <Message_Tags>
@@ -270,6 +324,15 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
+					<Message_Mailbox>Orange Book</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
 					<Message_Mailbox>Past Room</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
@@ -388,6 +451,15 @@
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
+			  <MessageTrigger>
+				  <Message_Mailbox>Lamp</Message_Mailbox>
+				  <Message_Tags>
+					  <MessageTag>
+						  <Message_Tag_Name>Action</Message_Tag_Name>
+						  <Message_Tag_Content>Disable</Message_Tag_Content>
+					  </MessageTag>
+				  </Message_Tags>
+			  </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
 			  <Message_Tags>
@@ -460,16 +532,16 @@
 			  <Message_Tags>
 				<MessageTag>
 				  <Message_Tag_Name>Action</Message_Tag_Name>
-				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				  <Message_Tag_Content>Appear</Message_Tag_Content>
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
 			<MessageTrigger>
-			  <Message_Mailbox>Green Book</Message_Mailbox>
+			  <Message_Mailbox>Orange Book</Message_Mailbox>
 			  <Message_Tags>
 				<MessageTag>
 				  <Message_Tag_Name>Action</Message_Tag_Name>
-				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				  <Message_Tag_Content>Appear</Message_Tag_Content>
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>

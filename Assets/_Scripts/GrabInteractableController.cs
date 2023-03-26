@@ -19,10 +19,15 @@ public class GrabInteractableController : MonoBehaviour
     public List<HighlightEffect> effects = new List<HighlightEffect>();
     private bool firstPickUp = false;
 
+    private AudioSource grabAudioSource = null;
+    public AudioClip pickUpSound = null;
+    public AudioClip dropSound = null;
+
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        grabAudioSource = this.GetComponent<AudioSource>();
         original_origin = this.transform.position;
         current_origin = original_origin;
         foreach(Collider c in this.gameObject.GetComponentsInChildren<Collider>()) object_colliders.Add(c);
@@ -107,6 +112,7 @@ public class GrabInteractableController : MonoBehaviour
     public void OnGrab()
     {
         foreach (Collider c in object_colliders) c.isTrigger = true;
+        if(grabAudioSource!= null) if (pickUpSound != null) grabAudioSource.PlayOneShot(pickUpSound);
         if (firstPickUp == false)
         {
             MessageObject new_message = new MessageObject(this.name);

@@ -3,12 +3,67 @@ guid: 0944160363ce3924c8a36fc2bce21ca7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOOKT_aiStandardSurface1
+    second: {fileID: 2100000, guid: 6e87fdccac6e89c48b48650da458c631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOOKT_aiStandardSurface2
+    second: {fileID: 2100000, guid: a94a16c0938bc6d4f8392c3e5f8c5550, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOOKT_aiStandardSurface5
+    second: {fileID: 2100000, guid: e690f5e67d324f042b1b8f6d67c6b52a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOOKT_aiStandardSurface6
+    second: {fileID: 2100000, guid: 2e45fc1c97d944c42b2ec8ebb7455349, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOOKT_aiStandardSurface7
+    second: {fileID: 2100000, guid: c37cb43e1d3299f43a5edea86e57a91a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOOKT_aiStandardSurface8
+    second: {fileID: 2100000, guid: fb82b5e806994de49add37648ccf1d28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair2_aiStandardSurface2
+    second: {fileID: 2100000, guid: 9a6a336ec2cdca44591dac2702228c51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair2_aiStandardSurface4
+    second: {fileID: 2100000, guid: 193a2818d62e8cd4d956a8737c46a9fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintingWalls_aiStandardSurface3
+    second: {fileID: 2100000, guid: 8298a03e9b281a8409106bcbf799d068, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface3
+    second: {fileID: 2100000, guid: ae1afefc053255e45b8e968b6c34cacb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 29e096e5bd53a3b4f8bf6260d8fffe49, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
