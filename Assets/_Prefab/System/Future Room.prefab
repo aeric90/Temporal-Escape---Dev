@@ -2460,37 +2460,37 @@ PrefabInstance:
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.948
+      value: -2.493
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.612
+      value: 0.2982
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.102
+      value: 1.821
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.23880544
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.9710674
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
@@ -2500,12 +2500,17 @@ PrefabInstance:
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -152.368
       objectReference: {fileID: 0}
     - target: {fileID: 4685319248309829263, guid: c9db322d0e5c7384bb19322c2dc1075c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650393562030879109, guid: c9db322d0e5c7384bb19322c2dc1075c,
+        type: 3}
+      propertyPath: flashingDelay
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9db322d0e5c7384bb19322c2dc1075c, type: 3}
@@ -3040,7 +3045,7 @@ PrefabInstance:
     - target: {fileID: 7726799653116457084, guid: 1815bb94e17074d44a6e1177232327f1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7726799653116457085, guid: 1815bb94e17074d44a6e1177232327f1,
         type: 3}

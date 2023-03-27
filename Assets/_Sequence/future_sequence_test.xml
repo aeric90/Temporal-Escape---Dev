@@ -809,5 +809,35 @@
 			<Messages_Out>
 			</Messages_Out>
 		</TriggerObject>
+		<TriggerObject id="Retinal Scanner Proximity">
+			<Message_In>
+				<Message_Mailbox>Retinal Scanner Proximity</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Zone Enter</Message_Tag_Name>
+						<Message_Tag_Content>Main Camera</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_Excluded>
+				<string>Eyeball Attached</string>
+			</Tags_Excluded>
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Retinal Scanner</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Sound</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>RetinalScanner_RetinalScanFailed</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
 	</trigger_objects>
 </SequenceContainer>
