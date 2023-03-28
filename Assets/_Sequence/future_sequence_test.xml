@@ -829,11 +829,11 @@
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Sound</Message_Tag_Content>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
 						<MessageTag>
 							<Message_Tag_Name>Name</Message_Tag_Name>
-							<Message_Tag_Content>RetinalScanner_RetinalScanFailed</Message_Tag_Content>
+							<Message_Tag_Content>failed</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>

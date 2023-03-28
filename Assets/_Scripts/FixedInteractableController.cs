@@ -62,6 +62,12 @@ public class FixedInteractableController : MonoBehaviour
         animator.SetBool("trigger", animation_trigger);
     }
 
+    private void AnimateObject(string name)
+    {
+        Debug.Log("Recieve Animate Command " + gameObject.name);
+        animator.SetTrigger(name);
+    }
+
     private void AttachObject()
     {
         attach_object_old.SetActive(true);
@@ -163,7 +169,14 @@ public class FixedInteractableController : MonoBehaviour
                     RemoveObject();
                     break;
                 case "Animate":
-                    AnimateObject();
+                    name = message.Get_Message_Tag("Name");
+                    if (name != "")
+                    {
+                        AnimateObject(name);
+                    } else
+                    {
+                        AnimateObject();
+                    }
                     break;
                 case "Attach":
                     name = message.Get_Message_Tag("Name");
