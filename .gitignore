@@ -76,3 +76,5 @@ crashlytics-build.properties
 
 #Photon Ignore
 /[Aa]ssets/Photon/
+
+/demo_build_*

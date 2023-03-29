@@ -443,8 +443,21 @@
 			</Tags_Excluded>
 			<Tags_On />
 			<Tags_Off />
-			<Messages_Out>
-			</Messages_Out>
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Retinal Scanner</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Animate</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>failed</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Access Retinal Scanner - With Eyeball">
 			<Message_In>
@@ -482,12 +495,12 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
-					<Message_Mailbox>Secret Door</Message_Mailbox>
+					<Message_Mailbox>Future Secret Door</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
-						</MessageTag>
+						</MessageTag>          
 					</Message_Tags>
 				</MessageTrigger>
 			</Messages_Out>
@@ -525,6 +538,19 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Retinal Scanner</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Animate</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>succeed</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Open Clock Drawer">
@@ -809,13 +835,13 @@
 			<Messages_Out>
 			</Messages_Out>
 		</TriggerObject>
-		<TriggerObject id="Retinal Scanner Proximity">
+		<TriggerObject id="Use Retinal Scanner - No Eyeball">
 			<Message_In>
-				<Message_Mailbox>Retinal Scanner Proximity</Message_Mailbox>
+				<Message_Mailbox>Retinal Scanner</Message_Mailbox>
 				<Message_Tags>
 					<MessageTag>
-						<Message_Tag_Name>Zone Enter</Message_Tag_Name>
-						<Message_Tag_Content>Main Camera</Message_Tag_Content>
+						<Message_Tag_Name>Used</Message_Tag_Name>
+						<Message_Tag_Content>Retinal Scanner</Message_Tag_Content>
 					</MessageTag>
 				</Message_Tags>
 			</Message_In>
