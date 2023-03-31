@@ -1198,6 +1198,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4549749068146277698}
     m_Modifications:
+    - target: {fileID: 1901502341577611218, guid: 98a935c60319dd941b4e65217cf6174b,
+        type: 3}
+      propertyPath: rmsCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2575681454806473747, guid: 98a935c60319dd941b4e65217cf6174b,
         type: 3}
       propertyPath: m_Size.x
@@ -1502,6 +1507,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4549749068146277698}
     m_Modifications:
+    - target: {fileID: 658088550028765011, guid: c912187953a5af141ae445b2b9264780,
+        type: 3}
+      propertyPath: rmsCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5237460785996675544, guid: c912187953a5af141ae445b2b9264780,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1873,6 +1883,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4549749068146277698}
     m_Modifications:
+    - target: {fileID: 658088550028765011, guid: 8bfa77e7e5fc1794496a077249843ae5,
+        type: 3}
+      propertyPath: rmsCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5237460785996675544, guid: 8bfa77e7e5fc1794496a077249843ae5,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2952,17 +2967,17 @@ PrefabInstance:
     - target: {fileID: 7149378237565026492, guid: 2444fa22643ad0d439fae906d1a648ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.58
+      value: 0.6895
       objectReference: {fileID: 0}
     - target: {fileID: 7149378237565026492, guid: 2444fa22643ad0d439fae906d1a648ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.465
+      value: 0.4398
       objectReference: {fileID: 0}
     - target: {fileID: 7149378237565026492, guid: 2444fa22643ad0d439fae906d1a648ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.346
+      value: -3.4207
       objectReference: {fileID: 0}
     - target: {fileID: 7149378237565026492, guid: 2444fa22643ad0d439fae906d1a648ca,
         type: 3}
@@ -3669,6 +3684,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4549749068146277698}
     m_Modifications:
+    - target: {fileID: 4935493745901778486, guid: 2525b9cf6e1280449a0657ca639340d3,
+        type: 3}
+      propertyPath: rmsCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7540065670446160440, guid: 2525b9cf6e1280449a0657ca639340d3,
         type: 3}
       propertyPath: m_RootOrder
