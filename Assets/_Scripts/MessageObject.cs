@@ -91,8 +91,10 @@ public class MessageObject
     // This function parses the JSON tag list for a particular tag name and returns the value associated
     public string Get_Message_Tag(string tag_name)
     {
+        string tag = "";
         JObject test = JObject.Parse(Tags);
+        if(test.ContainsKey(tag_name)) tag = test[tag_name].ToString();
 
-        return test[tag_name].ToString();
+        return tag;
     }
 }
