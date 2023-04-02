@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MenuUIController : MonoBehaviour
 {
+
     public void OnPastClick()
     {
         TemporalEscapeController.instance.SwitchRoom("Past Room");
@@ -18,4 +19,5 @@ public class MenuUIController : MonoBehaviour
     {
         Application.Quit();
     }
+
 }

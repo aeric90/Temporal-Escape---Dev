@@ -58,6 +58,13 @@ public class LocomotionController : MonoBehaviour
         }
 
         if (test()) TemporalEscapeController.instance.SwitchRoom("Menu Room");
+
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool temporalSpoofB, activationThreshold);
+
+        if (temporalSpoofA) TemporalController.instance.Network_Event("Wall Smash");
+        if (temporalSpoofB) TemporalController.instance.Network_Event("Eyeball Send");
+
     }
 
     public bool CheckIfActivated(XRController controller)

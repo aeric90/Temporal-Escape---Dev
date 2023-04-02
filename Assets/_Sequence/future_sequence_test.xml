@@ -311,6 +311,19 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
+					<Message_Mailbox>Painting</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
 					<Message_Mailbox>Intact Wall Placeholder</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
@@ -353,6 +366,10 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>move</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -578,6 +595,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>open</Message_Tag_Content>
+						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -637,6 +658,10 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>open</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -707,6 +732,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>open</Message_Tag_Content>
+						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -779,6 +808,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>close</Message_Tag_Content>
+						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -833,6 +866,19 @@
 			</Tags_On>
 			<Tags_Off />
 			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Clock Drawer</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>temporal</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Use Retinal Scanner - No Eyeball">
