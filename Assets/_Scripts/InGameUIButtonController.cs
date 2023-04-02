@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class InGameUIButtonController : MonoBehaviour
 {
-    public Canvas InGameMenuCanvas;
+    public GameObject InGameMenu;
     private bool UITrigger = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Right Hand Grab Controller" && UITrigger == false)
         {
-            InGameMenuCanvas.enabled = !InGameMenuCanvas.enabled;   
+            InGameMenu.SetActive(!InGameMenu.activeSelf);
             UITrigger = true;
         }
     }
