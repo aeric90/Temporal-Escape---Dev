@@ -15,6 +15,7 @@ public class InGameUIController : MonoBehaviour
     public GameObject accessibilityControls;
     public GameObject soundControls;
     public GameObject exitControls;
+    public GameObject InGameMenu;
 
     public AudioSource voiceChatSound;
     public Slider mainSlider;
@@ -101,6 +102,11 @@ public class InGameUIController : MonoBehaviour
     public void VoiceChatSlider()
     {
         voiceChatSound.volume = voiceSlider.value;
+    }
+
+    public void ExitMenu()
+    {
+        InGameMenu.SetActive(!InGameMenu.activeSelf); 
     }
 
 }
