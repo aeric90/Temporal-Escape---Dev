@@ -183,6 +183,28 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Vase Broken</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Vase Broken</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Vase Pieces</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Boot Laptop">

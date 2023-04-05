@@ -78,15 +78,11 @@
 			</Tags_On>
 			<Messages_Out>
 				<MessageTrigger>
-					<Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+					<Message_Mailbox>Symbol</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Attach</Message_Tag_Content>
-						</MessageTag>
-						<MessageTag>
-							<Message_Tag_Name>Name</Message_Tag_Name>
-							<Message_Tag_Content>Symbol</Message_Tag_Content>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -407,7 +403,7 @@
 		</TriggerObject>
 		<TriggerObject id="Wall Smash">
 		  <Message_In>
-			<Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+			<Message_Mailbox>Past Intact Wall</Message_Mailbox>
 			<Message_Tags>
 			  <MessageTag>
 				<Message_Tag_Name>Grab Object</Message_Tag_Name>
@@ -452,7 +448,7 @@
 				  </Message_Tags>
 			  </MessageTrigger>
 			<MessageTrigger>
-			  <Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+			  <Message_Mailbox>Past Intact Wall</Message_Mailbox>
 			  <Message_Tags>
 				<MessageTag>
 				  <Message_Tag_Name>Action</Message_Tag_Name>
@@ -460,12 +456,21 @@
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Symbol</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			<MessageTrigger>
-			  <Message_Mailbox>Past Smashed Wall Placeholder</Message_Mailbox>
+			  <Message_Mailbox>Past Room</Message_Mailbox>
 			  <Message_Tags>
 				<MessageTag>
 				  <Message_Tag_Name>Action</Message_Tag_Name>
-				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				  <Message_Tag_Content>Wall</Message_Tag_Content>
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
