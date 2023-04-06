@@ -574,6 +574,15 @@
 						</MessageTag>          
 					</Message_Tags>
 				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Future Room</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Expand</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Trick Retinal Scanner">
@@ -960,6 +969,50 @@
 						<MessageTag>
 							<Message_Tag_Name>Name</Message_Tag_Name>
 							<Message_Tag_Content>failed</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Temporal Key Pick Up">
+			<Message_In>
+				<Message_Mailbox>Temporal Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Temporal Event</Message_Tag_Name>
+						<Message_Tag_Content>Key Pick Up</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Future Room</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Floor</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Key Temporal Effect</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Key Temporal Effect</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>spawn</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>

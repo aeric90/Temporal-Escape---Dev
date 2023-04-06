@@ -8,9 +8,15 @@ public class FutureRoomController : MonoBehaviour
 {
     MailboxController mailbox = null;  // Holds the current object's mailbox object
     public GameObject teleport_area_2;
-
+    public GameObject teleport_area_3;
+    public GameObject secret_mask_1;
+    public GameObject secret_mask_2;
+    private int expandCount = 0;
     public GameObject regularWall;
     public GameObject holeWall;
+
+    public GameObject regularFloor;
+    public GameObject stainFloor;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +32,29 @@ public class FutureRoomController : MonoBehaviour
 
     void ExpandRoom()
     {
-        teleport_area_2.SetActive(true);
+        if (expandCount == 0) 
+        { 
+            teleport_area_2.SetActive(true);
+            secret_mask_1.SetActive(false);
+        }
+        if(expandCount == 1)
+        {
+            teleport_area_3.SetActive(true);
+            secret_mask_2.SetActive(false);
+        }
+        expandCount++;
     }
 
     void SwapWalls()
     {
         regularWall.SetActive(false);
         holeWall.SetActive(true);
+    }
+
+    void SwapFloors()
+    {
+        regularFloor.SetActive(true);
+        stainFloor.SetActive(false);
     }
 
     private void CheckMailbox()
@@ -49,6 +71,9 @@ public class FutureRoomController : MonoBehaviour
                     break;
                 case "Wall":
                     SwapWalls();
+                    break;
+                case "Floor":
+                    SwapFloors();
                     break;
                 default:
                     break;

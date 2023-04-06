@@ -16,8 +16,6 @@ public class LocomotionController : MonoBehaviour
 
     private TeleportationProvider teleportationProvider;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -61,10 +59,12 @@ public class LocomotionController : MonoBehaviour
 
         InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
         InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool temporalSpoofB, activationThreshold);
+        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofC, activationThreshold);
+        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool temporalSpoofD, activationThreshold);
 
-        if (temporalSpoofA) TemporalController.instance.Network_Event("Wall Smash");
-        if (temporalSpoofB) TemporalController.instance.Network_Event("Eyeball Send");
-
+        if (temporalSpoofA) TemporalController.instance.Network_Event("Key Pick Up");
+        if (temporalSpoofB) TemporalController.instance.Network_Event("Wall Smash");
+        if (temporalSpoofC) TemporalController.instance.Network_Event("Eyeball Send");
     }
 
     public bool CheckIfActivated(XRController controller)

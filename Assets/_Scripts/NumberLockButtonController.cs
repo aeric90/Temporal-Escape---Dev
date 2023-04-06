@@ -17,7 +17,7 @@ public class NumberLockButtonController : MonoBehaviour
         {
             int button_num = int.Parse(button_text.text);
             button_num++;
-            if (button_num > 9) button_num = 0;
+            if (button_num > 6) button_num = 1;
             button_text.text = button_num.ToString();
         }
     }
