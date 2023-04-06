@@ -7,7 +7,6 @@ public class BrokenAlarmController : MonoBehaviour
     public GameObject alarmText;
     public float flashingDelay = 1.0f;
     private float timeElapsed = 0.0f;
-    private bool isPlaying = false;
     private AudioSource audioSource;
     void Start()
     {

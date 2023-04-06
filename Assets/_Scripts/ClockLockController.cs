@@ -14,7 +14,6 @@ public class ClockLockController : MonoBehaviour
     public string lock_answer;
     private bool unlocked = false;
 
-
     // Start is called before the first frame update
     void Start()
     {

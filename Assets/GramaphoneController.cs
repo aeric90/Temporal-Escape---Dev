@@ -6,7 +6,6 @@ public class GramaphoneController : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    private bool isPlaying = false;
     private AudioSource audioSource;
     void Start()
     {
