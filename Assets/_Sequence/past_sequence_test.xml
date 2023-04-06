@@ -136,6 +136,19 @@
 			</Message_Tags>
 		  </Message_In>
 		  <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Chest</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Chest Key</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Chest</Message_Mailbox>
 			  <Message_Tags>
