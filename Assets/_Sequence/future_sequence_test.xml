@@ -183,6 +183,23 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Timer Controller</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Timer Start</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Vase Despawn Spawn Timer</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Duration</Message_Tag_Name>
+							<Message_Tag_Content>2.0</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
         <MessageTrigger>
           <Message_Mailbox>Vase Broken</Message_Mailbox>
           <Message_Tags>
@@ -205,6 +222,30 @@
             </MessageTag>
           </Message_Tags>
         </MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Vase Despawn Spawn Timer">
+			<Message_In>
+				<Message_Mailbox>Timer Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Timer End</Message_Tag_Name>
+						<Message_Tag_Content>Vase Despawn Spawn Timer</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Vase Broken</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Boot Laptop">
@@ -346,20 +387,11 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
-					<Message_Mailbox>Intact Wall Placeholder</Message_Mailbox>
+					<Message_Mailbox>Future Room</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Remove</Message_Tag_Content>
-						</MessageTag>
-					</Message_Tags>
-				</MessageTrigger>
-				<MessageTrigger>
-					<Message_Mailbox>Smashed Wall Placeholder</Message_Mailbox>
-					<Message_Tags>
-						<MessageTag>
-							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Spawn</Message_Tag_Content>
+							<Message_Tag_Content>Wall</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>

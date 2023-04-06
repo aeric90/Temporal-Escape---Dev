@@ -9,7 +9,7 @@ public class TemporalEscapeController : MonoBehaviour
     public static TemporalEscapeController instance;
     public GameObject active_room;
     public List<GameObject> rooms = new List<GameObject>();
-
+    public MenuAudioController menuAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,8 @@ public class TemporalEscapeController : MonoBehaviour
     IEnumerator SwitchRoomRoutine(int room_id)
     {
         FadeController.instance.SetFade(true);
-        yield return new WaitForSeconds(1);
+        menuAudio.FadeAudio();
+        yield return new WaitForSeconds(3);
         active_room.SetActive(false);
         active_room = rooms[room_id];
         active_room.SetActive(true);
