@@ -336,7 +336,7 @@
 		</TriggerObject>
 		<TriggerObject id="Open Secret Room">
 			<Message_In>
-				<Message_Mailbox>Secret Door Lock</Message_Mailbox>
+				<Message_Mailbox>Strange Lock</Message_Mailbox>
 				<Message_Tags>
 					<MessageTag>
 						<Message_Tag_Name>Status</Message_Tag_Name>
@@ -403,6 +403,15 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Past Room</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Expand</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Wall Smash">
