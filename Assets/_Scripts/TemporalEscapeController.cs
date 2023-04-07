@@ -37,7 +37,7 @@ public class TemporalEscapeController : MonoBehaviour
                 room_id = 2;
                 break;
             default:
-                UIInputControl.instance.SetControllersToUI();
+                //UIInputControl.instance.SetControllersToUI();
                 room_id = 0;
                 break;
         }
@@ -50,9 +50,13 @@ public class TemporalEscapeController : MonoBehaviour
         FadeController.instance.SetFade(true);
         menuAudio.FadeAudio();
         yield return new WaitForSeconds(3);
-        active_room.SetActive(false);
+        Destroy(active_room);
+        yield return null;
+        //active_room.SetActive(false);
         active_room = rooms[room_id];
-        active_room.SetActive(true);
+        //active_room.SetActive(true);
+        Instantiate(active_room);
+        yield return null;
         FadeController.instance.SetFade(false);
     }
 }
