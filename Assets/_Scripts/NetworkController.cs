@@ -6,9 +6,12 @@ using Photon.Realtime;
 
 public class NetworkController : MonoBehaviourPunCallbacks
 {
+    public static NetworkController instance;
+
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = false;
+        instance = this;
     }
 
     // Start is called before the first frame update
@@ -28,7 +31,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnected)
         {
             //PhotonNetwork.JoinRandomRoom();
-            PhotonNetwork.JoinRoom("TE_TEST");
+            //PhotonNetwork.JoinRoom("TE_TEST");
         }
         else
         {
@@ -37,11 +40,21 @@ public class NetworkController : MonoBehaviourPunCallbacks
         }
     }
 
+    public void JoinRoom()
+    {
+        if (PhotonNetwork.IsConnected) PhotonNetwork.JoinRoom("TE_TEST");
+    }
+
+    public void LeaveRoom()
+    {
+        if (PhotonNetwork.IsConnected) PhotonNetwork.LeaveRoom();
+    }
+
     public override void OnConnectedToMaster()
     {
         Debug.Log("PUN Basics Tutorial/Launcher: OnConnectedToMaster() was called by PUN");
         //PhotonNetwork.JoinRandomRoom();
-        PhotonNetwork.JoinRoom("TE_TEST");
+        //PhotonNetwork.JoinRoom("TE_TEST");
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -67,5 +80,15 @@ public class NetworkController : MonoBehaviourPunCallbacks
         base.OnJoinRoomFailed(returnCode, message);
         Debug.Log(message);
         PhotonNetwork.CreateRoom("TE_TEST", new RoomOptions());
+    }
+
+    public int GetPlayerCount()
+    {
+        return PhotonNetwork.CurrentRoom.PlayerCount;
+    }
+
+    public bool InRoom()
+    {
+        return PhotonNetwork.InRoom;
     }
 }

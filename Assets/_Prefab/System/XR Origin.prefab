@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_ControllerNode: 4
-  m_SelectUsage: 3
+  m_SelectUsage: 2
   m_ActivateUsage: 2
   m_UIPressUsage: 2
   m_AxisToPressThreshold: 0.1
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_ControllerNode: 5
-  m_SelectUsage: 3
+  m_SelectUsage: 2
   m_ActivateUsage: 2
   m_UIPressUsage: 2
   m_AxisToPressThreshold: 0.1
@@ -4566,7 +4566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ce2da4d56720a44a7b09df8db16aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InGameMenu: {fileID: 0}
+  InGameMenu: {fileID: 2029535032}
 --- !u!1 &1869504482
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,7 +5272,7 @@ MonoBehaviour:
   accessibilityControls: {fileID: 8406988156917540526}
   soundControls: {fileID: 6798959359181574695}
   exitControls: {fileID: 8457481432036104940}
-  InGameMenu: {fileID: 0}
+  InGameMenu: {fileID: 2029535032}
   voiceChatSound: {fileID: 1220641742}
   mainSlider: {fileID: 1876516794}
   voiceSlider: {fileID: 1572668363}
@@ -5714,7 +5714,7 @@ MonoBehaviour:
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_ControllerNode: 4
-  m_SelectUsage: 3
+  m_SelectUsage: 2
   m_ActivateUsage: 2
   m_UIPressUsage: 2
   m_AxisToPressThreshold: 0.1
@@ -6826,7 +6826,7 @@ MonoBehaviour:
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_ControllerNode: 5
-  m_SelectUsage: 3
+  m_SelectUsage: 2
   m_ActivateUsage: 2
   m_UIPressUsage: 2
   m_AxisToPressThreshold: 0.1
