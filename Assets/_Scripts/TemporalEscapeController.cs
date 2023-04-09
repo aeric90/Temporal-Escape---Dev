@@ -97,9 +97,9 @@ public class TemporalEscapeController : MonoBehaviour
         {
             statusText = "Cancelling connection...";
             yield return new WaitForSeconds(1.0f);
+        } else {
+            statusText = "Select an option";
         }
-
-        statusText = "Select an option";
     }
 
     IEnumerator SwitchRoomRoutine(int room_id)
