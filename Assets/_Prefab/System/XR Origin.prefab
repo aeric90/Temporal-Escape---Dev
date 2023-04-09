@@ -398,8 +398,8 @@ RectTransform:
   m_Father: {fileID: 740353543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -781,7 +781,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3414,22 +3414,22 @@ MonoBehaviour:
   m_FillRect: {fileID: 2133062602}
   m_HandleRect: {fileID: 503990270}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: -40
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2029535038}
         m_TargetAssemblyTypeName: InGameUIController, Assembly-CSharp
-        m_MethodName: VoiceChatSlider
-        m_Mode: 1
+        m_MethodName: SetVCSound
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: -40
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4758,22 +4758,22 @@ MonoBehaviour:
   m_FillRect: {fileID: 651641050}
   m_HandleRect: {fileID: 1909462757}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: -40
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2029535038}
         m_TargetAssemblyTypeName: InGameUIController, Assembly-CSharp
-        m_MethodName: MainAudioSlider
-        m_Mode: 1
+        m_MethodName: SetSFXSound
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: -40
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4946,8 +4946,8 @@ RectTransform:
   m_Father: {fileID: 1258111155}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5147,7 +5147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2029535033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5276,6 +5276,7 @@ MonoBehaviour:
   voiceChatSound: {fileID: 1220641742}
   mainSlider: {fileID: 1876516794}
   voiceSlider: {fileID: 1572668363}
+  mainMixer: {fileID: 24100000, guid: 5b136392a86b4514e9fa4f9fe8b5fade, type: 2}
 --- !u!222 &4040573897405151875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5483,7 +5484,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6754,7 +6755,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 0
+  sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &2386296041837794710
@@ -7662,7 +7663,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3456043767442103998
 MonoBehaviour:
   m_ObjectHideFlags: 0

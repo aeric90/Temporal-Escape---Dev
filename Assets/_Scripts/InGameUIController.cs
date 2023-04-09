@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -20,6 +21,8 @@ public class InGameUIController : MonoBehaviour
     public AudioSource voiceChatSound;
     public Slider mainSlider;
     public Slider voiceSlider;
+
+    public AudioMixer mainMixer;
 
 
     // Start is called before the first frame update
@@ -108,6 +111,15 @@ public class InGameUIController : MonoBehaviour
     public void ExitMenu()
     {
         InGameMenu.SetActive(!InGameMenu.activeSelf); 
+    }
+
+    public void SetSFXSound(float soundLevel)
+    {
+        mainMixer.SetFloat("sfxVol", soundLevel);
+    }
+    public void SetVCSound(float soundLevel)
+    {
+        mainMixer.SetFloat("vcVol", soundLevel);
     }
 
 }
