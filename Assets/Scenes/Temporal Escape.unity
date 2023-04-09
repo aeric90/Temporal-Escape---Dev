@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3986deb98168394684c41606a9495af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplificationFactor: 10
+  amplificationFactor: 2.5
 --- !u!1001 &1331134928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -795,6 +795,11 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1397686329, guid: 03db1ad97f74b024696702548f2fca73, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5594626443882512491, guid: 5b136392a86b4514e9fa4f9fe8b5fade,
+        type: 2}
     - target: {fileID: 1989692917, guid: 03db1ad97f74b024696702548f2fca73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -992,6 +997,15 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 501489850}
+    - target: {fileID: 1220641742, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220641742, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3682243893202198315, guid: 5b136392a86b4514e9fa4f9fe8b5fade,
+        type: 2}
     - target: {fileID: 4040573896551595591, guid: 42e05f31c4b09fe4b91f7e8e8d4b696b,
         type: 3}
       propertyPath: m_InteractionManager
