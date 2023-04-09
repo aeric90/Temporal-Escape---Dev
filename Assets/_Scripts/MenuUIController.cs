@@ -11,6 +11,9 @@ public class MenuUIController : MonoBehaviour
     private void Update()
     {
         statusText.text = TemporalEscapeController.instance.GetStatusText();
+
+        if (Input.GetKeyDown(KeyCode.A)) OnPastClick();
+        if (Input.GetKeyDown(KeyCode.S)) OnFutureClick();
     }
 
     public void OnPastClick()
