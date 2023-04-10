@@ -28,8 +28,8 @@ public class InGameUIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioListener.volume = mainSlider.value;
-        voiceChatSound.volume = voiceSlider.value;
+        //AudioListener.volume = mainSlider.value;
+        //voiceChatSound.volume = voiceSlider.value;
     }
 
     // Update is called once per frame
@@ -99,13 +99,13 @@ public class InGameUIController : MonoBehaviour
     public void MainAudioSlider()
     {
         //No clue if this one's gonna work, it's giving me sass.
-        AudioListener.volume = mainSlider.value;
+        //AudioListener.volume = mainSlider.value;
     }
 
 
     public void VoiceChatSlider()
     {
-        voiceChatSound.volume = voiceSlider.value;
+        //voiceChatSound.volume = voiceSlider.value;
     }
 
     public void ExitMenu()

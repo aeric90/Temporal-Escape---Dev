@@ -10,7 +10,7 @@ public class MenuUIController : MonoBehaviour
 
     private void Update()
     {
-        statusText.text = TemporalEscapeController.instance.GetStatusText();
+        if(statusText != null) statusText.text = TemporalEscapeController.instance.GetStatusText();
 
         if (Input.GetKeyDown(KeyCode.A)) OnPastClick();
         if (Input.GetKeyDown(KeyCode.S)) OnFutureClick();
@@ -21,12 +21,12 @@ public class MenuUIController : MonoBehaviour
         if (roomClicked == false)
         {
             TemporalEscapeController.instance.SwitchRoom("Past Room");
-            buttonText.text = "Cancel";
+            if (buttonText != null) buttonText.text = "Cancel";
             roomClicked = true;
         } else
         {
             TemporalEscapeController.instance.CancelConnect();
-            buttonText.text = "Enter Game";
+            if (buttonText != null) buttonText.text = "Enter Game";
             roomClicked = false;
         }
     }
@@ -36,13 +36,13 @@ public class MenuUIController : MonoBehaviour
         if (roomClicked == false)
         {
             TemporalEscapeController.instance.SwitchRoom("Future Room");
-            buttonText.text = "Cancel";
+            if (buttonText != null) buttonText.text = "Cancel";
             roomClicked = true;
         }
         else
         {
             TemporalEscapeController.instance.CancelConnect();
-            buttonText.text = "Enter Game";
+            if (buttonText != null) buttonText.text = "Enter Game";
             roomClicked = false;
         }
     }
