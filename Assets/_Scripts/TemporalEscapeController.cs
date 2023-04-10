@@ -88,6 +88,8 @@ public class TemporalEscapeController : MonoBehaviour
             }
             else
             {
+                statusText = "Enjoy your escape!";
+                menuAudio.FadeAudio();
                 StartCoroutine(SwitchRoomRoutine(room_id));
                 break;
             }
@@ -104,9 +106,7 @@ public class TemporalEscapeController : MonoBehaviour
 
     IEnumerator SwitchRoomRoutine(int room_id)
     {
-        statusText = "Enjoy your escape!";
         FadeController.instance.SetFade(true);
-        menuAudio.FadeAudio();
         yield return new WaitForSeconds(3);
         Destroy(active_room);
         yield return null;
