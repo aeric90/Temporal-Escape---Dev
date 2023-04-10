@@ -430,6 +430,15 @@
 					</Message_Tags>
 				</MessageTrigger>
         <MessageTrigger>
+          <Message_Mailbox>Eyeball In A Jar</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Appear</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
           <Message_Mailbox>Past Room</Message_Mailbox>
           <Message_Tags>
             <MessageTag>
@@ -821,5 +830,176 @@
 				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
+    <TriggerObject id="Remove Temnporal">
+      <Message_In>
+        <Message_Mailbox>Temporal Controller</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Temporal Event</Message_Tag_Name>
+            <Message_Tag_Content>Desk Drawer Open</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_Required/>
+      <Tags_Off />
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Timer Controller</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Timer Start</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Card Remove Timer</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Duration</Message_Tag_Name>
+              <Message_Tag_Content>0.5</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 1 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 1 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 2 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 2 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 3 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 3 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 4 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 4 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
+    <TriggerObject id="Card Remove Timer">
+      <Message_In>
+        <Message_Mailbox>Timer Controller</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Timer End</Message_Tag_Name>
+            <Message_Tag_Content>Card Remove Timer</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_On />
+      <Tags_Off />
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Card 1</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 2</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 3</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 4</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
 	</trigger_objects>
 </SequenceContainer>
