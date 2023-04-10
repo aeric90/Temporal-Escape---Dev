@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 public class LocomotionController : MonoBehaviour
 {
+    MailboxController mailbox = null;  // Holds the current object's mailbox object
+
     public XRController leftTeleportRay;
     public XRController rightTeleportRay;
 
@@ -16,11 +19,12 @@ public class LocomotionController : MonoBehaviour
 
     private TeleportationProvider teleportationProvider;
 
-
+    private int i = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
         teleportationProvider = GetComponentInParent<TeleportationProvider>();
     }
 
@@ -60,11 +64,55 @@ public class LocomotionController : MonoBehaviour
         if (test()) TemporalEscapeController.instance.SwitchRoom("Menu Room");
 
         InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
-        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool temporalSpoofB, activationThreshold);
+        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool openFireplace, activationThreshold);
+        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool openSecretDoor, activationThreshold);
 
-        if (temporalSpoofA) TemporalController.instance.Network_Event("Wall Smash");
-        if (temporalSpoofB) TemporalController.instance.Network_Event("Eyeball Send");
+        if (temporalSpoofA)
+        {
+            switch (i)
+            {
+                case 0:
+                    TemporalController.instance.Network_Event("Key Pick Up");
+                    break;
+                case 1:
+                    TemporalController.instance.Network_Event("Wall Smash");
+                    break;
+                case 2:
+                    TemporalController.instance.Network_Event("Eyeball Send");
+                    break;
+                case 3:
+                    TemporalController.instance.Network_Event("Past Escape");
+                    break;
+                case 4:
+                    TemporalController.instance.Network_Event("Desk Drawer Open");
+                    break;
+                default:
+                    break;
+            }
 
+            i++;
+            temporalSpoofA = false;
+        }
+
+        if(openFireplace)
+        {
+            MessageObject new_message = new MessageObject("Book Lock");
+            new_message.Add_Message_Tag("Status", "Unlock");
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+            openFireplace = false;
+        }
+
+        if(openSecretDoor)
+        {
+            MessageObject new_message = new MessageObject("Strange Lock");
+            new_message.Add_Message_Tag("Status", "Unlock");
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+            openSecretDoor = false;
+        }
     }
 
     public bool CheckIfActivated(XRController controller)

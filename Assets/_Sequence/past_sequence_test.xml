@@ -78,15 +78,11 @@
 			</Tags_On>
 			<Messages_Out>
 				<MessageTrigger>
-					<Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+					<Message_Mailbox>Symbol</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Attach</Message_Tag_Content>
-						</MessageTag>
-						<MessageTag>
-							<Message_Tag_Name>Name</Message_Tag_Name>
-							<Message_Tag_Content>Symbol</Message_Tag_Content>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -96,6 +92,19 @@
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Disable</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Lamp</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Attach</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Spot Light</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -140,6 +149,19 @@
 			</Message_Tags>
 		  </Message_In>
 		  <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Chest</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Chest Key</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Chest</Message_Mailbox>
 			  <Message_Tags>
@@ -212,6 +234,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>open</Message_Tag_Content>
+            </MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -336,7 +362,7 @@
 		</TriggerObject>
 		<TriggerObject id="Open Secret Room">
 			<Message_In>
-				<Message_Mailbox>Secret Door Lock</Message_Mailbox>
+				<Message_Mailbox>Strange Lock</Message_Mailbox>
 				<Message_Tags>
 					<MessageTag>
 						<Message_Tag_Name>Status</Message_Tag_Name>
@@ -403,11 +429,29 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Eyeball In A Jar</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Appear</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Past Room</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Expand</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Wall Smash">
 		  <Message_In>
-			<Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+			<Message_Mailbox>Past Intact Wall</Message_Mailbox>
 			<Message_Tags>
 			  <MessageTag>
 				<Message_Tag_Name>Grab Object</Message_Tag_Name>
@@ -452,7 +496,7 @@
 				  </Message_Tags>
 			  </MessageTrigger>
 			<MessageTrigger>
-			  <Message_Mailbox>Past Intact Wall Placeholder</Message_Mailbox>
+			  <Message_Mailbox>Past Intact Wall</Message_Mailbox>
 			  <Message_Tags>
 				<MessageTag>
 				  <Message_Tag_Name>Action</Message_Tag_Name>
@@ -460,12 +504,21 @@
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Symbol</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			<MessageTrigger>
-			  <Message_Mailbox>Past Smashed Wall Placeholder</Message_Mailbox>
+			  <Message_Mailbox>Past Room</Message_Mailbox>
 			  <Message_Tags>
 				<MessageTag>
 				  <Message_Tag_Name>Action</Message_Tag_Name>
-				  <Message_Tag_Content>Spawn</Message_Tag_Content>
+				  <Message_Tag_Content>Wall</Message_Tag_Content>
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
@@ -491,6 +544,19 @@
 			</Message_Tags>
 		  </Message_In>
 		  <Messages_Out>
+			  <MessageTrigger>
+				  <Message_Mailbox>Desk Drawer</Message_Mailbox>
+				  <Message_Tags>
+					  <MessageTag>
+						  <Message_Tag_Name>Action</Message_Tag_Name>
+						  <Message_Tag_Content>Attach</Message_Tag_Content>
+					  </MessageTag>
+					  <MessageTag>
+						  <Message_Tag_Name>Name</Message_Tag_Name>
+						  <Message_Tag_Content>Desk Key</Message_Tag_Content>
+					  </MessageTag>
+				  </Message_Tags>
+			  </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Desk Drawer</Message_Mailbox>
 			  <Message_Tags>
@@ -729,6 +795,10 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>close</Message_Tag_Content>
+            </MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
@@ -760,5 +830,213 @@
 				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
+    <TriggerObject id="Remove Temnporal">
+      <Message_In>
+        <Message_Mailbox>Temporal Controller</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Temporal Event</Message_Tag_Name>
+            <Message_Tag_Content>Desk Drawer Open</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_Required/>
+      <Tags_Off />
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Timer Controller</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Timer Start</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Card Remove Timer</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Duration</Message_Tag_Name>
+              <Message_Tag_Content>0.5</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 1 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 1 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 2 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 2 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 3 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 3 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 4 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 4 Temporal</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Temporal Effect</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
+    <TriggerObject id="Card Remove Timer">
+      <Message_In>
+        <Message_Mailbox>Timer Controller</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Timer End</Message_Tag_Name>
+            <Message_Tag_Content>Card Remove Timer</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_On />
+      <Tags_Off />
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Card 1</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 2</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 3</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Card 4</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
+    <TriggerObject id="Secret Room Button Pushed">
+      <Message_In>
+        <Message_Mailbox>Secret Room Button</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Used</Message_Tag_Name>
+            <Message_Tag_Content>Secret Room Button</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_Excluded/>
+      <Tags_On/>
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Secret Room Wall</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Animate</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>open</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Secret Room Button</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Disable</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
 	</trigger_objects>
 </SequenceContainer>

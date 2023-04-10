@@ -183,6 +183,69 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Timer Controller</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Timer Start</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Vase Despawn Spawn Timer</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Duration</Message_Tag_Name>
+							<Message_Tag_Content>2.0</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Vase Broken</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Vase Broken</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Vase Pieces</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Vase Despawn Spawn Timer">
+			<Message_In>
+				<Message_Mailbox>Timer Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Timer End</Message_Tag_Name>
+						<Message_Tag_Content>Vase Despawn Spawn Timer</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Tags_On />
+			<Tags_Off />
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Vase Broken</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Remove</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Boot Laptop">
@@ -324,20 +387,11 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
-					<Message_Mailbox>Intact Wall Placeholder</Message_Mailbox>
+					<Message_Mailbox>Future Room</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Remove</Message_Tag_Content>
-						</MessageTag>
-					</Message_Tags>
-				</MessageTrigger>
-				<MessageTrigger>
-					<Message_Mailbox>Smashed Wall Placeholder</Message_Mailbox>
-					<Message_Tags>
-						<MessageTag>
-							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Spawn</Message_Tag_Content>
+							<Message_Tag_Content>Wall</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -518,6 +572,15 @@
 							<Message_Tag_Name>Action</Message_Tag_Name>
 							<Message_Tag_Content>Animate</Message_Tag_Content>
 						</MessageTag>          
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Future Room</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Expand</Message_Tag_Content>
+						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
 			</Messages_Out>
@@ -701,7 +764,7 @@
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Spawn</Message_Tag_Content>
+							<Message_Tag_Content>Appear</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -774,7 +837,7 @@
 					<Message_Tags>
 						<MessageTag>
 							<Message_Tag_Name>Action</Message_Tag_Name>
-							<Message_Tag_Content>Spawn</Message_Tag_Content>
+							<Message_Tag_Content>Appear</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -906,6 +969,91 @@
 						<MessageTag>
 							<Message_Tag_Name>Name</Message_Tag_Name>
 							<Message_Tag_Content>failed</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Temporal Key Pick Up">
+			<Message_In>
+				<Message_Mailbox>Temporal Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Temporal Event</Message_Tag_Name>
+						<Message_Tag_Content>Key Pick Up</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Future Room</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Floor</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Key Temporal Effect</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Key Temporal Effect</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>spawn</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>
+		<TriggerObject id="Temporal Past Escape">
+			<Message_In>
+				<Message_Mailbox>Temporal Controller</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Temporal Event</Message_Tag_Name>
+						<Message_Tag_Content>Past Escape</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Hanging Skeleton</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>vanish</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Blood Text</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Animate</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>vanish</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>

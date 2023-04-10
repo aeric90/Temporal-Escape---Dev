@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -15,16 +16,20 @@ public class InGameUIController : MonoBehaviour
     public GameObject accessibilityControls;
     public GameObject soundControls;
     public GameObject exitControls;
+    public GameObject InGameMenu;
 
     public AudioSource voiceChatSound;
     public Slider mainSlider;
     public Slider voiceSlider;
 
+    public AudioMixer mainMixer;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        AudioListener.volume = mainSlider.value;
-        voiceChatSound.volume = voiceSlider.value;
+        //AudioListener.volume = mainSlider.value;
+        //voiceChatSound.volume = voiceSlider.value;
     }
 
     // Update is called once per frame
@@ -94,13 +99,27 @@ public class InGameUIController : MonoBehaviour
     public void MainAudioSlider()
     {
         //No clue if this one's gonna work, it's giving me sass.
-        AudioListener.volume = mainSlider.value;
+        //AudioListener.volume = mainSlider.value;
     }
 
 
     public void VoiceChatSlider()
     {
-        voiceChatSound.volume = voiceSlider.value;
+        //voiceChatSound.volume = voiceSlider.value;
+    }
+
+    public void ExitMenu()
+    {
+        InGameMenu.SetActive(!InGameMenu.activeSelf); 
+    }
+
+    public void SetSFXSound()
+    {
+        mainMixer.SetFloat("sfxVol", mainSlider.value);
+    }
+    public void SetVCSound()
+    {
+        mainMixer.SetFloat("vcVol", voiceSlider.value);
     }
 
 }

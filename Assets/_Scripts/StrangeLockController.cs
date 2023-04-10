@@ -42,13 +42,19 @@ public class StrangeLockController : MonoBehaviour
 
             if (lockStatus)
             {
-                MessageObject new_message = new MessageObject(this.name);
-                new_message.Add_Message_Tag("Status", "Unlock");
-                new_message.Close_Tags();
-                new_message.Date_Time = DateTime.Now.ToString();
-                mailbox.Send_To_Sequence(new_message);
-                lockSolved = true;
+                StartCoroutine(solveProcess());
             }
         }
+    }
+
+    IEnumerator solveProcess()
+    {
+        yield return new WaitForSeconds(0.1f);
+        MessageObject new_message = new MessageObject(this.name);
+        new_message.Add_Message_Tag("Status", "Unlock");
+        new_message.Close_Tags();
+        new_message.Date_Time = DateTime.Now.ToString();
+        mailbox.Send_To_Sequence(new_message);
+        lockSolved = true;
     }
 }

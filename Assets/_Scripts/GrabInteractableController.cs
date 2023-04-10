@@ -41,6 +41,7 @@ public class GrabInteractableController : MonoBehaviour
 
     private void AppearObject()
     {
+        Debug.Log("Recieve Appear Command " + gameObject.name);
         model.SetActive(true);
         foreach (Collider c in object_colliders) c.enabled = true;
         object_body.useGravity = true;

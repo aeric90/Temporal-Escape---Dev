@@ -142,6 +142,7 @@ public class FixedInteractableController : MonoBehaviour
     {
         if (other.gameObject.tag == "GrabInteractable")
         {
+            Debug.Log(other.name);
             MessageObject new_message = new MessageObject(this.name);
             new_message.Add_Message_Tag("Grab Object", other.gameObject.name);
             new_message.Close_Tags();
