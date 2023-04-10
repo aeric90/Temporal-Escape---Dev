@@ -1001,5 +1001,42 @@
         </MessageTrigger>
       </Messages_Out>
     </TriggerObject>
+    <TriggerObject id="Secret Room Button Pushed">
+      <Message_In>
+        <Message_Mailbox>Secret Room Button</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Used</Message_Tag_Name>
+            <Message_Tag_Content>Secret Room Button</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_Excluded/>
+      <Tags_On/>
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Secret Room Wall</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Animate</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>open</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Secret Room Button</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Disable</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
 	</trigger_objects>
 </SequenceContainer>
