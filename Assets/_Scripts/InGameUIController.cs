@@ -113,13 +113,13 @@ public class InGameUIController : MonoBehaviour
         InGameMenu.SetActive(!InGameMenu.activeSelf); 
     }
 
-    public void SetSFXSound(float soundLevel)
+    public void SetSFXSound()
     {
-        mainMixer.SetFloat("sfxVol", soundLevel);
+        mainMixer.SetFloat("sfxVol", mainSlider.value);
     }
-    public void SetVCSound(float soundLevel)
+    public void SetVCSound()
     {
-        mainMixer.SetFloat("vcVol", soundLevel);
+        mainMixer.SetFloat("vcVol", voiceSlider.value);
     }
 
 }
