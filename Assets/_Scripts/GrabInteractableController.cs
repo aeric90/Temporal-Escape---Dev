@@ -22,6 +22,8 @@ public class GrabInteractableController : MonoBehaviour
     private AudioSource grabAudioSource = null;
     public AudioClip pickUpSound = null;
     public AudioClip dropSound = null;
+    public bool soundActive = false;
+    private bool isPlaying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +70,7 @@ public class GrabInteractableController : MonoBehaviour
     {
         object_body.constraints = RigidbodyConstraints.FreezeAll;
         foreach (HighlightEffect effect in effects) effect.highlighted = false;
+        foreach (Collider c in object_colliders) c.enabled = false;
         GetComponent<XRGrabInteractable>().enabled = false;
     }
 
@@ -122,6 +125,7 @@ public class GrabInteractableController : MonoBehaviour
             new_message.Date_Time = DateTime.Now.ToString();
             mailbox.Send_To_Sequence(new_message);
             firstPickUp = true;
+            soundActive = true;
         }
     }
     public void OnDrop()
@@ -144,6 +148,21 @@ public class GrabInteractableController : MonoBehaviour
         {
             object_body.velocity = Vector3.zero;
             this.transform.position = current_origin;
+        } else
+        {
+            if (grabAudioSource != null && dropSound != null && soundActive) StartCoroutine(PlayDropSound());
+        }
+        
+    }
+
+    IEnumerator PlayDropSound()
+    {
+        if(!isPlaying)
+        {
+            isPlaying = true;
+            grabAudioSource.PlayOneShot(dropSound);
+            yield return new WaitForSeconds(0.3f);
+            isPlaying = false;
         }
     }
 }

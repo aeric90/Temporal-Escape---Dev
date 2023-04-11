@@ -323,8 +323,8 @@ MonoBehaviour:
   object_body: {fileID: 7986410142503633201}
   model: {fileID: 6937160954440981244}
   effects: []
-  pickUpSound: {fileID: 0}
-  dropSound: {fileID: 0}
+  pickUpSound: {fileID: 8300000, guid: 9c5386da4cba28c42a198f5029015fcc, type: 3}
+  dropSound: {fileID: 8300000, guid: 8926d424469f68f49a8396886435b61f, type: 3}
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0

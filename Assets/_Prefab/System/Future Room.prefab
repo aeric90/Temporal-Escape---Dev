@@ -1486,6 +1486,7 @@ Transform:
   - {fileID: 932184475}
   - {fileID: 2610911276796887179}
   - {fileID: 1137880383}
+  - {fileID: 4779918252256004291}
   m_Father: {fileID: 5210863071064287387}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1706,6 +1707,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4041695050312595914}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8659626472228446424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4779918252256004291}
+  m_Layer: 3
+  m_Name: Notebook Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4779918252256004291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659626472228446424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.448, y: 0.020802796, z: 0.08031845}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1370427987242981403}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8886940574970074592
 GameObject:
@@ -2588,6 +2620,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986410142503633210, guid: c1abc43133651bf408b49290041daa76,
         type: 3}
+      propertyPath: dropSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 82a6bc04bb8d7d5449bd07ba03951e95, type: 3}
+    - target: {fileID: 7986410142503633210, guid: c1abc43133651bf408b49290041daa76,
+        type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0da1795479074b34d941de65539683ba, type: 3}
+    - target: {fileID: 7986410142503633210, guid: c1abc43133651bf408b49290041daa76,
+        type: 3}
       propertyPath: spawn_position
       value: 
       objectReference: {fileID: 932184475}
@@ -2619,17 +2661,17 @@ PrefabInstance:
     - target: {fileID: 7986410142503633205, guid: 007e4e99a1cde74448d4776e0db1241f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.448
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986410142503633205, guid: 007e4e99a1cde74448d4776e0db1241f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.020802796
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 7986410142503633205, guid: 007e4e99a1cde74448d4776e0db1241f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.08031845
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986410142503633205, guid: 007e4e99a1cde74448d4776e0db1241f,
         type: 3}
@@ -2666,6 +2708,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7986410142503633210, guid: 007e4e99a1cde74448d4776e0db1241f,
+        type: 3}
+      propertyPath: dropSound
+      value: 
+      objectReference: {fileID: 8300000, guid: aac9b4844e58ae64281a498aad4680ae, type: 3}
+    - target: {fileID: 7986410142503633210, guid: 007e4e99a1cde74448d4776e0db1241f,
+        type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 333714b3a5058fa4fbc3c248a50b7f9a, type: 3}
+    - target: {fileID: 7986410142503633210, guid: 007e4e99a1cde74448d4776e0db1241f,
+        type: 3}
+      propertyPath: spawn_position
+      value: 
+      objectReference: {fileID: 4779918252256004291}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 007e4e99a1cde74448d4776e0db1241f, type: 3}
 --- !u!4 &7986410140986640784 stripped
@@ -4255,6 +4312,26 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2945745704973284914, guid: 5f3495b74efbac047aa11dc5fcf428e4, type: 3}
+--- !u!1 &4715722518941502467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9125247410280847474, guid: 238a2ef3ad1e75e4f89ca4d2c985d449,
+    type: 3}
+  m_PrefabInstance: {fileID: 4599011438563316849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1422962176
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715722518941502467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -52948011972594022, guid: 0944160363ce3924c8a36fc2bce21ca7, type: 3}
 --- !u!1 &4819467905512019057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9020930024331984896, guid: 238a2ef3ad1e75e4f89ca4d2c985d449,
@@ -4765,6 +4842,16 @@ PrefabInstance:
       objectReference: {fileID: 7661544633159906381}
     - target: {fileID: 7986410142503633210, guid: 2b4510ae46530b9449b63e4b93f84a0a,
         type: 3}
+      propertyPath: dropSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b8757bba8e4250546b613a47297290f5, type: 3}
+    - target: {fileID: 7986410142503633210, guid: 2b4510ae46530b9449b63e4b93f84a0a,
+        type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3491ebea6c450a045a05b856cec08e0f, type: 3}
+    - target: {fileID: 7986410142503633210, guid: 2b4510ae46530b9449b63e4b93f84a0a,
+        type: 3}
       propertyPath: effects.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -5183,6 +5270,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5210863071064287387}
     m_Modifications:
+    - target: {fileID: -6343929415399001190, guid: 960d4e84d56f80448a59586f098fa036,
+        type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a6f9a7373d0e6f0468795f4c6e8f2b2a, type: 3}
     - target: {fileID: -6343929415399001190, guid: 960d4e84d56f80448a59586f098fa036,
         type: 3}
       propertyPath: spawn_position
