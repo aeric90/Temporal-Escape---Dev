@@ -18,7 +18,7 @@ public class PastRoomController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
     }
@@ -31,6 +31,7 @@ public class PastRoomController : MonoBehaviour
 
     void ExpandRoom()
     {
+        Debug.Log("Recieve Expand Command " + gameObject.name);
         if (expandCount == 0)
         {
             teleport_area_2.SetActive(true);
@@ -57,6 +58,7 @@ public class PastRoomController : MonoBehaviour
         // Do until there are no messages in the mailbox
         while (message != null)
         {
+            Debug.Log("Recieved Message " + gameObject.name);
             switch (message.Get_Message_Tag("Action"))
             {
                 case "Expand":

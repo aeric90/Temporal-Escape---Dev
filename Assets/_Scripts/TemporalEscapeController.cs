@@ -3,27 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+public enum GAME_TYPE
+{
+    FUTURE,
+    PAST
+}
 
 public class TemporalEscapeController : MonoBehaviour
 {
+    MailboxController mailbox = null;  // Holds the current object's mailbox object
     public static TemporalEscapeController instance;
     public GameObject active_room;
     public List<GameObject> rooms = new List<GameObject>();
-    public MenuAudioController menuAudio;
+    public GameObject xrOrigin;
+    public GAME_TYPE startingRoom = GAME_TYPE.PAST;
 
     private string statusText = "Select an option";
     private int room_id = 0;
 
+    public bool testing = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        if(instance == null) instance = this;
+        mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
+        if (instance == null) instance = this;
+        active_room = Instantiate(rooms[0]);
+        switch (startingRoom)
+        {
+            case GAME_TYPE.PAST:
+                MenuRoomController.instance.SetPastMenu();
+                break;
+            case GAME_TYPE.FUTURE:
+                MenuRoomController.instance.SetFutureMenu();
+                break;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (mailbox != null) CheckMailbox();
     }
 
     public string GetStatusText()
@@ -34,23 +54,35 @@ public class TemporalEscapeController : MonoBehaviour
     public void SwitchRoom(string room_name) 
     {
         switch(room_name) {
+            case "Menu Room":
+                room_id = 0;
+                break;
             case "Past Room":
                 room_id = 1;
                 break;
             case "Future Room":
                 room_id = 2;
                 break;
+            case "End Game Room":
+                room_id = 3;
+                break;
             default:
                 room_id = 0;
                 break;
         }
         
-        StartCoroutine(WaitForPlayers());
+        if(!testing) StartCoroutine(WaitForPlayers());
+        if(testing) StartCoroutine(SwitchRoomRoutine(room_id));
     }
 
     public void CancelConnect()
     {
         NetworkController.instance.LeaveRoom();
+    }
+
+    public void GameOverProcess(bool win)
+    {
+        StartCoroutine(SwitchGameOverRoomRoutine(win));
     }
 
     IEnumerator WaitForPlayers()
@@ -89,7 +121,6 @@ public class TemporalEscapeController : MonoBehaviour
             else
             {
                 statusText = "Enjoy your escape!";
-                menuAudio.FadeAudio();
                 StartCoroutine(SwitchRoomRoutine(room_id));
                 break;
             }
@@ -99,6 +130,7 @@ public class TemporalEscapeController : MonoBehaviour
         {
             statusText = "Cancelling connection...";
             yield return new WaitForSeconds(1.0f);
+            statusText = "Select an option";
         } else {
             statusText = "Select an option";
         }
@@ -106,13 +138,70 @@ public class TemporalEscapeController : MonoBehaviour
 
     IEnumerator SwitchRoomRoutine(int room_id)
     {
+        MenuAudioController.instance.FadeAudio();
         FadeController.instance.SetFade(true);
         yield return new WaitForSeconds(3);
         Destroy(active_room);
         yield return null;
-        active_room = rooms[room_id];
-        Instantiate(active_room);
+        xrOrigin.transform.position = new Vector3(0.0f, xrOrigin.transform.position.y, 0.0f);
+        active_room = Instantiate(rooms[room_id]);
+        switch(room_id)
+        {
+            case 0:
+                switch (startingRoom)
+                {
+                    case GAME_TYPE.PAST:
+                        MenuRoomController.instance.SetPastMenu();
+                        break;
+                    case GAME_TYPE.FUTURE:
+                        MenuRoomController.instance.SetFutureMenu();
+                        break;
+                }
+                break;
+            case 1:
+                active_room.gameObject.name = "Past Room";
+                break;
+            case 2:
+                active_room.gameObject.name = "Future Room";
+                break;
+        }
+
         yield return null;
         FadeController.instance.SetFade(false);
+    }
+
+    IEnumerator SwitchGameOverRoomRoutine(bool win)
+    {
+        FadeController.instance.SetFade(true);
+        yield return new WaitForSeconds(3);
+        Destroy(active_room);
+        yield return null;
+        xrOrigin.transform.position = new Vector3(0.0f, xrOrigin.transform.position.y, 0.0f);
+        active_room = Instantiate(rooms[3]);
+        EndRoomController.instance.SetObjects(win);
+        yield return null;
+        FadeController.instance.SetFade(false);
+    }
+
+    private void CheckMailbox()
+    {
+        MessageObject message = mailbox.Get_Message(); // Get the first message, if any
+
+        // Do until there are no messages in the mailbox
+        while (message != null)
+        {
+            Debug.Log("Recieved Message " + gameObject.name);
+            switch (message.Get_Message_Tag("Action"))
+            {
+                case "Game Over":
+                    GameOverProcess(true);
+                    break;
+                default:
+                    break;
+            }
+
+            mailbox.Remove_Message(message); // Remove the processed message
+            message = mailbox.Get_Message(); // Get the next message, if any
+        }
     }
 }

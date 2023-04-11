@@ -47,6 +47,12 @@ public class MenuUIController : MonoBehaviour
         }
     }
 
+    public void OnMenuClick()
+    {
+        TemporalEscapeController.instance.SwitchRoom("Menu Room");
+        NetworkController.instance.LeaveRoom();
+    }
+
     public void OnQuitClick()
     {
         Application.Quit();

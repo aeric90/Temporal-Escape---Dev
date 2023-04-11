@@ -101,6 +101,13 @@ public class LocomotionController : MonoBehaviour
             new_message.Close_Tags();
             new_message.Date_Time = DateTime.Now.ToString();
             mailbox.Send_To_Sequence(new_message);
+
+            new_message = new MessageObject("Laptop Lock");
+            new_message.Add_Message_Tag("Status", "Unlock");
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+
             openFireplace = false;
         }
 
@@ -111,6 +118,19 @@ public class LocomotionController : MonoBehaviour
             new_message.Close_Tags();
             new_message.Date_Time = DateTime.Now.ToString();
             mailbox.Send_To_Sequence(new_message);
+
+            new_message = new MessageObject("Retinal Scanner");
+            new_message.Add_Message_Tag("Grab Object", "Eyeball In A Jar");
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+
+            new_message = new MessageObject("Retinal Scanner");
+            new_message.Add_Message_Tag("Grab Object", "Retinal Scanner ID Card");
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_Sequence(new_message);
+
             openSecretDoor = false;
         }
     }

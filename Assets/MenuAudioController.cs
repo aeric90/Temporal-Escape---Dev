@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MenuAudioController : MonoBehaviour
 {
+    public static MenuAudioController instance;
     private AudioSource audioSource;
     private float startVolume;
     private float fadeTime = 3.0f;
@@ -12,6 +13,7 @@ public class MenuAudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         audioSource = GetComponent<AudioSource>();
         startVolume = audioSource.volume;
     }

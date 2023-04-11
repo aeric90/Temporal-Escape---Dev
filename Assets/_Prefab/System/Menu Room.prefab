@@ -1139,7 +1139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1206494236
 Transform:
   m_ObjectHideFlags: 0
@@ -2008,6 +2008,7 @@ GameObject:
   - component: {fileID: 325058812408463530}
   - component: {fileID: 1397686329}
   - component: {fileID: 1397686330}
+  - component: {fileID: 5479486835105846256}
   m_Layer: 0
   m_Name: Menu Room
   m_TagString: Untagged
@@ -2047,7 +2048,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5594626443882512491, guid: 5b136392a86b4514e9fa4f9fe8b5fade,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 3827bf7bff7fe1e4489fbe13aaa6915e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b14d1539c06292e4fa5017615cf5f71b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2145,6 +2146,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bce73e88b07fe045869434f1583e2f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5479486835105846256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325058812408463531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2c3bc39498c1543811c88b1cdd4090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pastMenu: {fileID: 1206494235}
+  futureMenu: {fileID: 765036570}
 --- !u!1 &1390569275642620682
 GameObject:
   m_ObjectHideFlags: 0
@@ -7536,7 +7551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3524925225322384170
 Transform:
   m_ObjectHideFlags: 0

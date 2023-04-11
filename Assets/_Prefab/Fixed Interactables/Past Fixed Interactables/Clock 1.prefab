@@ -214,7 +214,7 @@ MonoBehaviour:
   - {fileID: 7098296705505638649}
   original_origin: {x: 0, y: 0, z: 0}
   spawn_position: {fileID: 0}
-  mainCollider: {fileID: 1416125734072784230}
+  mainCollider: {fileID: 0}
   effects:
   - {fileID: 4966173605622234294}
   eventSounds: []

@@ -107,7 +107,7 @@ public class FixedInteractableController : MonoBehaviour
         foreach(HighlightEffect effect in effects) {
             effect.highlighted = false;
         }
-        mainCollider.enabled = false;
+        if(mainCollider != null) mainCollider.enabled = false;
     }
 
     private void ActivateObject()
