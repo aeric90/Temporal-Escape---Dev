@@ -19,6 +19,9 @@ public class LocomotionController : MonoBehaviour
 
     private TeleportationProvider teleportationProvider;
 
+    bool firePlaceOpen = false;
+    bool secretDoorOpen = false;
+
     private int i = 0;
 
     // Start is called before the first frame update
@@ -94,7 +97,7 @@ public class LocomotionController : MonoBehaviour
             temporalSpoofA = false;
         }
 
-        if(openFireplace)
+        if(openFireplace && !firePlaceOpen)
         {
             MessageObject new_message = new MessageObject("Book Lock");
             new_message.Add_Message_Tag("Status", "Unlock");
@@ -108,10 +111,10 @@ public class LocomotionController : MonoBehaviour
             new_message.Date_Time = DateTime.Now.ToString();
             mailbox.Send_To_Sequence(new_message);
 
-            openFireplace = false;
+            firePlaceOpen= true;
         }
 
-        if(openSecretDoor)
+        if(openSecretDoor && !secretDoorOpen)
         {
             MessageObject new_message = new MessageObject("Strange Lock");
             new_message.Add_Message_Tag("Status", "Unlock");
@@ -131,7 +134,7 @@ public class LocomotionController : MonoBehaviour
             new_message.Date_Time = DateTime.Now.ToString();
             mailbox.Send_To_Sequence(new_message);
 
-            openSecretDoor = false;
+            secretDoorOpen = true;
         }
     }
 
