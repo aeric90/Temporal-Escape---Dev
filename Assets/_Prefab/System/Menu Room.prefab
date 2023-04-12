@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Use the joystick to select where on the floor you''d like to be.
+  m_text: 'Hold the joystick up to select where on the floor you''d like to be.
 
 
     Select
@@ -18853,7 +18853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flick the Joystick to rotate your position
+  m_text: Flick the Joystick left or right to rotate your position
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bc62f71a7df9784fa57fb78cee814e5, type: 2}
   m_sharedMaterial: {fileID: -5504384597864765461, guid: 7bc62f71a7df9784fa57fb78cee814e5,
