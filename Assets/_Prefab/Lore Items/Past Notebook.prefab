@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4720260399837178240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4039746905828884244}
+  m_Layer: 3
+  m_Name: Grab Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4039746905828884244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720260399837178240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0105, y: 0, z: -0.1321}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7986410142503633205}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7986410142503633202
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +67,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4875949234422579472}
+  - {fileID: 4039746905828884244}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -157,7 +189,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 4039746905828884244}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -206,8 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f6d5e8e07a17d42b8e03cf831e41c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  original_origin: {x: 0, y: 0, z: 0}
-  current_origin: {x: 0, y: 0, z: 0}
   spawn_position: {fileID: 0}
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
@@ -216,6 +246,8 @@ MonoBehaviour:
   - {fileID: 0}
   pickUpSound: {fileID: 8300000, guid: 5f894b41b0bf7be4697dc3cfeb3ce05c, type: 3}
   dropSound: {fileID: 8300000, guid: 89e9a17f68ea16c46a1d7aa7f3e7f31e, type: 3}
+  soundActive: 0
+  isActive: 0
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,8 +367,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2633513, y: 0.01645559, z: 0.25324807}
-  m_Center: {x: 0.010000899, y: 0, z: -0.0040401258}
+  m_Size: {x: 0.2623274, y: 0.01645559, z: 0.25324807}
+  m_Center: {x: -0.009991478, y: 0, z: 0}
 --- !u!114 &8266777381501481324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,7 +412,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b3614487eca960645b5d408105b240a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01954178
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3614487eca960645b5d408105b240a5,
         type: 3}
@@ -390,7 +422,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b3614487eca960645b5d408105b240a5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0062388727
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3614487eca960645b5d408105b240a5,
         type: 3}

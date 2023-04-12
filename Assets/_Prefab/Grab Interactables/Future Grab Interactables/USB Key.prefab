@@ -36,7 +36,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 580678533559690011}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 580678533559690011}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -234,12 +235,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f6d5e8e07a17d42b8e03cf831e41c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  original_origin: {x: 0, y: 0, z: 0}
-  current_origin: {x: 0, y: 0, z: 0}
   spawn_position: {fileID: 0}
   despawn_position: {fileID: 0}
   object_body: {fileID: 1968961561771694909}
   model: {fileID: 0}
+  effects: []
+  pickUpSound: {fileID: 0}
+  dropSound: {fileID: 0}
+  soundActive: 0
+  isActive: 0
 --- !u!114 &2513270599627271957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,8 +363,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.02642484, y: 0.0021486136, z: 0.009075157}
-  m_Center: {x: -0.0023294338, y: 0.0010745235, z: 0}
+  m_Size: {x: 0.029019222, y: 0.003945481, z: 0.013098597}
+  m_Center: {x: -0.002, y: 0.001, z: 0}
 --- !u!114 &7647991389881967119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,3 +495,34 @@ MonoBehaviour:
   hitFxFadeOutDuration: 0.25
   hitFxColor: {r: 1, g: 1, b: 1, a: 1}
   hitFxRadius: 0.5
+--- !u!1 &2648687741895780391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580678533559690011}
+  m_Layer: 3
+  m_Name: Grab Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580678533559690011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648687741895780391}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.01126, y: 0.00116, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2937972853992402497}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
