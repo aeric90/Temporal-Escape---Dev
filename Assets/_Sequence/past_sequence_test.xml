@@ -516,6 +516,45 @@
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Wall Pieces</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Spawn</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Wall Pieces</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Attach</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>WallPieces</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+        <MessageTrigger>
+          <Message_Mailbox>Timer Controller</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Timer Start</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Name</Message_Tag_Name>
+              <Message_Tag_Content>Wall Piece Despawn Spawn Timer</Message_Tag_Content>
+            </MessageTag>
+            <MessageTag>
+              <Message_Tag_Name>Duration</Message_Tag_Name>
+              <Message_Tag_Content>2.0</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Hammer</Message_Mailbox>
 			  <Message_Tags>
@@ -563,6 +602,30 @@
 			</MessageTrigger>
 		  </Messages_Out>
 		</TriggerObject>
+    <TriggerObject id="Wall Piece Despawn Spawn Timer">
+      <Message_In>
+        <Message_Mailbox>Timer Controller</Message_Mailbox>
+        <Message_Tags>
+          <MessageTag>
+            <Message_Tag_Name>Timer End</Message_Tag_Name>
+            <Message_Tag_Content>Wall Piece Despawn Spawn Timer</Message_Tag_Content>
+          </MessageTag>
+        </Message_Tags>
+      </Message_In>
+      <Tags_On />
+      <Tags_Off />
+      <Messages_Out>
+        <MessageTrigger>
+          <Message_Mailbox>Wall Pieces</Message_Mailbox>
+          <Message_Tags>
+            <MessageTag>
+              <Message_Tag_Name>Action</Message_Tag_Name>
+              <Message_Tag_Content>Remove</Message_Tag_Content>
+            </MessageTag>
+          </Message_Tags>
+        </MessageTrigger>
+      </Messages_Out>
+    </TriggerObject>
 		<TriggerObject id="Unlock Desk">
 		  <Message_In>
 			<Message_Mailbox>Desk Drawer</Message_Mailbox>
