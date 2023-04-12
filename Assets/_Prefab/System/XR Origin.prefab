@@ -1564,7 +1564,7 @@ GameObject:
   - component: {fileID: 875143904}
   - component: {fileID: 875143906}
   m_Layer: 0
-  m_Name: Left Hard Grab Controller
+  m_Name: Left Hand Grab Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

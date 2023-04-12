@@ -66,8 +66,6 @@ public class LocomotionController : MonoBehaviour
             }
         }
 
-        if (test()) TemporalEscapeController.instance.SwitchRoom("Menu Room");
-
         InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
         InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool openFireplace, activationThreshold);
         InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool openSecretDoor, activationThreshold);
@@ -162,12 +160,5 @@ public class LocomotionController : MonoBehaviour
     {
         InputHelpers.IsPressed(controller.inputDevice, teleportActivationButton, out bool isActivated, activationThreshold);
         return isActivated;
-    }
-
-    public bool test()
-    {
-        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool isActivatedLeft, activationThreshold);
-        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool isActivatedRight, activationThreshold);
-        return isActivatedLeft && isActivatedRight;
     }
 }
