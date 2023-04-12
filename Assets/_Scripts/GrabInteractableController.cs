@@ -9,8 +9,6 @@ public class GrabInteractableController : MonoBehaviour
 {
     MailboxController mailbox = null;  // Holds the current object's mailbox object
 
-    public Vector3 original_origin;
-    public Vector3 current_origin;
     public Transform spawn_position;
     public Transform despawn_position;
     private List<Collider> object_colliders = new List<Collider>();
@@ -25,13 +23,13 @@ public class GrabInteractableController : MonoBehaviour
     public bool soundActive = false;
     private bool isPlaying = false;
 
+    public bool isActive = false;
+
     // Start is called before the first frame update
     void Start()
     {
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
         grabAudioSource = this.GetComponent<AudioSource>();
-        original_origin = this.transform.position;
-        current_origin = original_origin;
         foreach(Collider c in this.gameObject.GetComponentsInChildren<Collider>()) object_colliders.Add(c);
     }
 
@@ -47,23 +45,24 @@ public class GrabInteractableController : MonoBehaviour
         model.SetActive(true);
         foreach (Collider c in object_colliders) c.enabled = true;
         object_body.useGravity = true;
+        isActive = true;
     }
 
     private void SpawnObject()
     {
         Debug.Log("Recieve Spawn Command " + gameObject.name);
-        current_origin = spawn_position.transform.position;
         this.gameObject.transform.position = spawn_position.transform.position;
-        foreach(Collider c in object_colliders) c.enabled = true;
+        foreach (Collider c in object_colliders) c.enabled = true;
         object_body.useGravity = true;
+        isActive = true;
     }
 
     private void DespawnObject()
     {
         foreach (Collider c in object_colliders) c.enabled = false;
         object_body.useGravity = false;
-        current_origin = despawn_position.transform.position;
         this.gameObject.transform.position = despawn_position.transform.position;
+        isActive = false;
     }
 
     private void DisableObject()
@@ -72,6 +71,7 @@ public class GrabInteractableController : MonoBehaviour
         foreach (HighlightEffect effect in effects) effect.highlighted = false;
         foreach (Collider c in object_colliders) c.enabled = false;
         GetComponent<XRGrabInteractable>().enabled = false;
+        isActive = false;
     }
 
     private void RemoveObject()
@@ -103,6 +103,9 @@ public class GrabInteractableController : MonoBehaviour
                     break;
                 case "Disable":
                     DisableObject();
+                    break;
+                case "Return":
+                    ReturnSelf();
                     break;
                 default:
                     break;
@@ -138,7 +141,7 @@ public class GrabInteractableController : MonoBehaviour
         if (other.gameObject.tag == "Return")
         {
             object_body.velocity = Vector3.zero;
-            this.transform.position = current_origin;
+            this.transform.position = Vector3.zero + new Vector3(0.0f, 0.5f, 0.0f);
         }
     }
 
@@ -147,12 +150,20 @@ public class GrabInteractableController : MonoBehaviour
         if (collision.gameObject.tag == "Return")
         {
             object_body.velocity = Vector3.zero;
-            this.transform.position = current_origin;
+            this.transform.position = Vector3.zero + new Vector3(0.0f, 0.5f, 0.0f);
         } else
         {
             if (grabAudioSource != null && dropSound != null && soundActive) StartCoroutine(PlayDropSound());
+        } 
+    }
+
+    private void ReturnSelf()
+    {
+        if (isActive)
+        {
+            object_body.velocity = Vector3.zero;
+            this.transform.position = Vector3.zero + new Vector3(0.0f, 1.0f, 0.0f);
         }
-        
     }
 
     IEnumerator PlayDropSound()

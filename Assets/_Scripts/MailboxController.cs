@@ -34,6 +34,19 @@ public class MailboxController : MonoBehaviour
         } 
     }
 
+    public void Send_To_All(MessageObject outgoing_message)
+    {
+        StartCoroutine(Staggered_Send_All(outgoing_message));
+        /*
+        MailboxController[] mailboxes = (MailboxController[])GameObject.FindObjectsOfType(typeof(MailboxController));
+
+        foreach(MailboxController mailbox in mailboxes)
+        {
+            mailbox.Deliver_Message(outgoing_message);
+        }
+        */
+    }
+
     public void Send_To_Sequence(MessageObject outgoing_message)
     {
         SequenceManager.instance.GetMailbox().Deliver_Message(outgoing_message); // Add the message to the mailbox
@@ -75,5 +88,16 @@ public class MailboxController : MonoBehaviour
         MessageObject new_message = new MessageObject(this.gameObject.name);
 
         return new_message;
+    }
+
+    IEnumerator Staggered_Send_All(MessageObject message)
+    {
+        MailboxController[] mailboxes = (MailboxController[])GameObject.FindObjectsOfType(typeof(MailboxController));
+
+        foreach (MailboxController mailbox in mailboxes)
+        {
+            mailbox.Deliver_Message(message);
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

@@ -22,6 +22,8 @@ public class LocomotionController : MonoBehaviour
     bool firePlaceOpen = false;
     bool secretDoorOpen = false;
 
+    private bool returnAllClicked = false;
+
     private int i = 0;
 
     // Start is called before the first frame update
@@ -135,6 +137,24 @@ public class LocomotionController : MonoBehaviour
             mailbox.Send_To_Sequence(new_message);
 
             secretDoorOpen = true;
+        }
+
+        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool leftReturnAll, activationThreshold);
+        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool rightReturnAll, activationThreshold);
+
+        if (leftReturnAll && rightReturnAll && !returnAllClicked)
+        {
+            returnAllClicked = true;
+            MessageObject new_message = new MessageObject(this.name);
+            new_message.Add_Message_Tag("Action", "Return");
+            new_message.Close_Tags();
+            new_message.Date_Time = DateTime.Now.ToString();
+            mailbox.Send_To_All(new_message);
+        }
+
+        if(!leftReturnAll && !rightReturnAll && returnAllClicked)
+        {
+            returnAllClicked = false;
         }
     }
 

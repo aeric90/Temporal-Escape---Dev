@@ -20,6 +20,10 @@ public class DeskLockController : MonoBehaviour
     public Material lockOpenMat;
     public Material lockWrongMat;
 
+    public AudioClip buttonPress;
+    public AudioClip lockCorrect;
+    public AudioClip lockWrong;
+
     private List<int> codeEntered = new List<int>();
     public List<int> unlockCode = new List<int>();
 
@@ -40,6 +44,7 @@ public class DeskLockController : MonoBehaviour
         if(!codeEntered.Contains(i))
         {
             codeEntered.Add(i);
+            GetComponent<AudioSource>().PlayOneShot(buttonPress);
             deskLockButtons[i].GetComponent<MeshRenderer>().material = deskLockButtonOnMats[i];
         }
     }
@@ -48,6 +53,7 @@ public class DeskLockController : MonoBehaviour
     {
         if(checkLock())
         {
+            GetComponent<AudioSource>().PlayOneShot(lockCorrect);
             lockOpenButton.GetComponent<MeshRenderer>().material = lockOpenMat;
             MessageObject new_message = new MessageObject(this.name);
             new_message.Add_Message_Tag("Status", "Unlock");
@@ -128,7 +134,7 @@ public class DeskLockController : MonoBehaviour
         DisableLock();
 
         bool flash = true;
-
+        GetComponent<AudioSource>().PlayOneShot(lockWrong);
         for (int flashCount = 0; flashCount <= 5; flashCount++) {
             for(int buttonID = 0; buttonID < deskLockButtons.Count; buttonID++)
             {

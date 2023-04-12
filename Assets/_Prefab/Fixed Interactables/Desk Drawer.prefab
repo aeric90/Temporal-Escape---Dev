@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268720228541275714}
-  m_LocalRotation: {x: -0.7044896, y: 0.060783096, z: 0.060783125, w: 0.70448947}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7137014902430214256}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 9.863}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
 --- !u!1 &1810135133219251833
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810135133219251833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.143, y: 0.085, z: 0.061}
+  m_LocalPosition: {x: -0.143, y: 0.19539997, z: 0.2028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -140,7 +140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4097461112195600005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.168, y: 0.085, z: -0.381}
+  m_LocalPosition: {x: 0.168, y: 0.1954, z: -0.381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -279,8 +279,10 @@ MonoBehaviour:
   spawn_position: {fileID: 0}
   mainCollider: {fileID: 7149378237565026481}
   effects:
-  - {fileID: 0}
-  eventSounds: []
+  - {fileID: 2487256062805146993}
+  eventSounds:
+  - {fileID: 8300000, guid: 49f2421342408c641865d76f4b4acfe4, type: 3}
+  - {fileID: 8300000, guid: 5dddd5d6f5b9bff43af730c6b7061f86, type: 3}
 --- !u!95 &8787521535502177477
 Animator:
   serializedVersion: 5
@@ -455,14 +457,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076464945353356903}
-  m_LocalRotation: {x: -0.7022131, y: -0.083047085, z: -0.08304713, w: 0.70221317}
+  m_LocalRotation: {x: 0.0033083223, y: -0.11743125, z: -0.022351047, w: 0.99282396}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7574537768608131495}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -13.49}
+  m_LocalEulerAnglesHint: {x: 0.076, y: -13.493, z: -2.588}
 --- !u!1001 &406971318838957697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -651,31 +653,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8721312252759210965}
     m_Modifications:
-    - target: {fileID: 1674892961811695888, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.008535
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674892961811695888, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0.0024819
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674892961811695888, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674892961811695888, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.0000665
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674892961811695888, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.0047468
-      objectReference: {fileID: 0}
     - target: {fileID: 2975443717394521050, guid: 2afc7dc2eb5282c458e2679811d0ba86,
         type: 3}
       propertyPath: m_Pivot.x
@@ -720,21 +697,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0.0131
-      objectReference: {fileID: 0}
-    - target: {fileID: 2975443717394521050, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 23.91234
-      objectReference: {fileID: 0}
-    - target: {fileID: 2975443717394521050, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 23.91234
-      objectReference: {fileID: 0}
-    - target: {fileID: 2975443717394521050, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 23.912338
       objectReference: {fileID: 0}
     - target: {fileID: 2975443717394521050, guid: 2afc7dc2eb5282c458e2679811d0ba86,
         type: 3}
@@ -798,54 +760,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
         type: 3}
-      propertyPath: lockOffmat
-      value: 
-      objectReference: {fileID: 2100000, guid: b0efc27a1cc4e774da2a029deac15c4e, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: lockOpenMat
-      value: 
-      objectReference: {fileID: 2100000, guid: 7908911531604204291ff64c9d5f1b7a, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: lockWrongMat
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d086a9badcc8d844b182ab540c79264, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
       propertyPath: lockOpenButton
       value: 
       objectReference: {fileID: 1003040565850808669}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: unlockCode.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: unlockCode.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: unlockCode.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: unlockCode.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: unlockCode.Array.data[3]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtons.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
         type: 3}
       propertyPath: deskLockButtons.Array.data[0]
@@ -866,195 +783,10 @@ PrefabInstance:
       propertyPath: deskLockButtons.Array.data[3]
       value: 
       objectReference: {fileID: 2005051761496552712}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOnMats.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOffMats.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOnMats.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4334dc902ef6b0946a18493cd5afd85f, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOnMats.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9026d0459fb681a4c855733690a57e25, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOnMats.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8f4bad2ab30cf2941912aabed2699ba0, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOnMats.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: e1ab11af313c28f4092e9e9e8e58c513, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonWrongMats.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOffMats.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e9b57fd8b72b7784fae03a743a775527, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOffMats.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 62ca8b692a884d344a221b11587a91dd, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOffMats.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 958a72de8a167884ea7e2e4989b7cf70, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonOffMats.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: 32f0674920acd0b4fa9788255ac5d04d, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonWrongMats.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f663d1680e3c79b4d9c1412823401330, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonWrongMats.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 135760387d02e36498d6cf7ef9008b9f, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonWrongMats.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4f1b49a822649ea4ca3f977a3b9ac784, type: 2}
-    - target: {fileID: 3401040546808431024, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: deskLockButtonWrongMats.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0e0ab71ec11a27a4ea3a452f6bb423a2, type: 2}
-    - target: {fileID: 3431224048497931719, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00281
-      objectReference: {fileID: 0}
-    - target: {fileID: 3431224048497931719, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00325
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021726674696185986, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.00379
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021726674696185986, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0.003794
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021726674696185986, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021726674696185986, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.002809
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021726674696185986, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000803
-      objectReference: {fileID: 0}
     - target: {fileID: 4971146084780486461, guid: 2afc7dc2eb5282c458e2679811d0ba86,
         type: 3}
       propertyPath: m_Name
       value: Desk Lock
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503106709399070499, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.003895
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503106709399070499, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0.003847
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503106709399070499, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503106709399070499, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.002809
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503106709399070499, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00338
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519953508974283752, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.003847
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519953508974283752, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0.003801
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519953508974283752, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519953508974283752, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.002804
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519953508974283752, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.003358
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081220217447408644, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.003808
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081220217447408644, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0.003813
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081220217447408644, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081220217447408644, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.002692
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081220217447408644, guid: 2afc7dc2eb5282c458e2679811d0ba86,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000838
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2afc7dc2eb5282c458e2679811d0ba86, type: 3}

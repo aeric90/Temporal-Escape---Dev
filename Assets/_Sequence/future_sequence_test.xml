@@ -1301,5 +1301,31 @@
         </MessageTrigger>
       </Messages_Out>
     </TriggerObject>
+		<TriggerObject id="Laptop Boing">
+			<Message_In>
+				<Message_Mailbox>Laptop</Message_Mailbox>
+				<Message_Tags>
+					<MessageTag>
+						<Message_Tag_Name>Grab Object</Message_Tag_Name>
+						<Message_Tag_Content>Hammer</Message_Tag_Content>
+					</MessageTag>
+				</Message_Tags>
+			</Message_In>
+			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Laptop</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Sound</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>HammerBoing</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+			</Messages_Out>
+		</TriggerObject>		
 	</trigger_objects>
 </SequenceContainer>
