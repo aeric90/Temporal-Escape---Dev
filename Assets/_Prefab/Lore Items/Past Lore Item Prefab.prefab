@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1403987880996557209}
   - component: {fileID: 3352628935133321244}
   - component: {fileID: 3087821157916959776}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,9 +116,9 @@ GameObject:
   - component: {fileID: 3958206735044429726}
   - component: {fileID: -4059283665735063701}
   - component: {fileID: -402215208818052560}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Past Lore Item Prefab
-  m_TagString: Untagged
+  m_TagString: GrabInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,9 +130,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3574052641186530139}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4736507, y: 0.51808983, z: -4.5903015}
-  m_LocalScale: {x: 0.2, y: 0.001, z: 0.3}
+  m_LocalScale: {x: 0.19999997, y: 0.001, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7928723988580842672}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 2415422812291570740}
   - component: {fileID: 5792667487392822548}
   - component: {fileID: 2016590201368318829}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The year is 2023
+  m_text: 'The year is 1954
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

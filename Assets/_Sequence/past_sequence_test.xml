@@ -108,6 +108,19 @@
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Lamp</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Sound</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>Lamp_TurnOnSwitch</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
 		<TriggerObject id="Pick Up Key">
@@ -277,6 +290,19 @@
 			<Tags_On />
 			<Tags_Off />
 			<Messages_Out>
+				<MessageTrigger>
+					<Message_Mailbox>Fireplace</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Sound</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>FireplaceUnlock</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
 				<MessageTrigger>
 					<Message_Mailbox>Fireplace</Message_Mailbox>
 					<Message_Tags>
@@ -468,6 +494,19 @@
 		  <Tags_On />
 		  <Tags_Off />
 		  <Messages_Out>
+			  <MessageTrigger>
+				  <Message_Mailbox>Past Intact Wall</Message_Mailbox>
+				  <Message_Tags>
+					  <MessageTag>
+						  <Message_Tag_Name>Action</Message_Tag_Name>
+						  <Message_Tag_Content>Sound</Message_Tag_Content>
+					  </MessageTag>
+					  <MessageTag>
+						  <Message_Tag_Name>Name</Message_Tag_Name>
+						  <Message_Tag_Content>Wall Smash</Message_Tag_Content>
+					  </MessageTag>
+				  </Message_Tags>
+			  </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Desk Key</Message_Mailbox>
 			  <Message_Tags>
@@ -630,6 +669,19 @@
 				</MessageTag>
 			  </Message_Tags>
 			</MessageTrigger>
+			  <MessageTrigger>
+				  <Message_Mailbox>Clock 1</Message_Mailbox>
+				  <Message_Tags>
+					  <MessageTag>
+						  <Message_Tag_Name>Action</Message_Tag_Name>
+						  <Message_Tag_Content>Sound</Message_Tag_Content>
+					  </MessageTag>
+					  <MessageTag>
+						  <Message_Tag_Name>Name</Message_Tag_Name>
+						  <Message_Tag_Content>UnlockSound02</Message_Tag_Content>
+					  </MessageTag>
+				  </Message_Tags>
+			  </MessageTrigger>
 			<MessageTrigger>
 			  <Message_Mailbox>Strange Object 1</Message_Mailbox>
 			  <Message_Tags>
@@ -686,6 +738,19 @@
 					</Message_Tags>
 				</MessageTrigger>
 				<MessageTrigger>
+					<Message_Mailbox>Clock 2</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Sound</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>UnlockSound02</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
 					<Message_Mailbox>Strange Object 2</Message_Mailbox>
 					<Message_Tags>
 						<MessageTag>
@@ -737,6 +802,19 @@
 						<MessageTag>
 							<Message_Tag_Name>Name</Message_Tag_Name>
 							<Message_Tag_Content>Attached Strange Object 3</Message_Tag_Content>
+						</MessageTag>
+					</Message_Tags>
+				</MessageTrigger>
+				<MessageTrigger>
+					<Message_Mailbox>Clock 3</Message_Mailbox>
+					<Message_Tags>
+						<MessageTag>
+							<Message_Tag_Name>Action</Message_Tag_Name>
+							<Message_Tag_Content>Sound</Message_Tag_Content>
+						</MessageTag>
+						<MessageTag>
+							<Message_Tag_Name>Name</Message_Tag_Name>
+							<Message_Tag_Content>UnlockSound02</Message_Tag_Content>
 						</MessageTag>
 					</Message_Tags>
 				</MessageTrigger>
@@ -821,7 +899,7 @@
 				</MessageTrigger>
 			</Messages_Out>
 		</TriggerObject>
-    <TriggerObject id="Remove Temnporal">
+    <TriggerObject id="Remove Temporal">
       <Message_In>
         <Message_Mailbox>Temporal Controller</Message_Mailbox>
         <Message_Tags>
@@ -1005,6 +1083,19 @@
       <Tags_Excluded/>
       <Tags_On/>
       <Messages_Out>
+		  <MessageTrigger>
+			  <Message_Mailbox>Secret Room Button</Message_Mailbox>
+			  <Message_Tags>
+				  <MessageTag>
+					  <Message_Tag_Name>Action</Message_Tag_Name>
+					  <Message_Tag_Content>Sound</Message_Tag_Content>
+				  </MessageTag>
+				  <MessageTag>
+					  <Message_Tag_Name>Name</Message_Tag_Name>
+					  <Message_Tag_Content>Press Button</Message_Tag_Content>
+				  </MessageTag>
+			  </Message_Tags>
+		  </MessageTrigger>
         <MessageTrigger>
           <Message_Mailbox>Secret Room Wall</Message_Mailbox>
           <Message_Tags>

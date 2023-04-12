@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 209319049615530746}
   - component: {fileID: 5205151447703221859}
   - component: {fileID: 6744447835518754641}
-  - component: {fileID: 713006482574946863}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &713006482574946863
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340662805263463864}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7986410142503633202
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,9 +307,13 @@ MonoBehaviour:
   despawn_position: {fileID: 0}
   object_body: {fileID: 7986410142503633201}
   model: {fileID: 6937160954440981244}
-  effects: []
+  effects:
+  - {fileID: 4918077778244680450}
+  - {fileID: 6382800424117418658}
+  - {fileID: 5025950230544810980}
   pickUpSound: {fileID: 8300000, guid: 9c5386da4cba28c42a198f5029015fcc, type: 3}
   dropSound: {fileID: 8300000, guid: 8926d424469f68f49a8396886435b61f, type: 3}
+  soundActive: 0
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +335,8 @@ AudioSource:
   m_GameObject: {fileID: 7986410142503633202}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5594626443882512491, guid: 5b136392a86b4514e9fa4f9fe8b5fade,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -393,7 +383,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

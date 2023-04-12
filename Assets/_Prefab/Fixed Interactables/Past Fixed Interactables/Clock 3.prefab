@@ -218,7 +218,8 @@ MonoBehaviour:
   mainCollider: {fileID: 0}
   effects:
   - {fileID: 6241099277000489801}
-  eventSounds: []
+  eventSounds:
+  - {fileID: 8300000, guid: 49f2421342408c641865d76f4b4acfe4, type: 3}
 --- !u!95 &8787521535502177477
 Animator:
   serializedVersion: 5
@@ -296,7 +297,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

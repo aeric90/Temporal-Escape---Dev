@@ -273,6 +273,7 @@ MonoBehaviour:
   effects: []
   pickUpSound: {fileID: 8300000, guid: 5f894b41b0bf7be4697dc3cfeb3ce05c, type: 3}
   dropSound: {fileID: 8300000, guid: 89e9a17f68ea16c46a1d7aa7f3e7f31e, type: 3}
+  soundActive: 0
 --- !u!114 &7986410142503633211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

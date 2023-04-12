@@ -90,7 +90,7 @@ public class ClockLockController : MonoBehaviour
         {
             clock_hour = 1;
         }
-
+        GetComponent<AudioSource>().Play();
         StartCoroutine(rotateHands());
     }
 

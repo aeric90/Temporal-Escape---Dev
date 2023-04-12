@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2593752529210989573}
+  - component: {fileID: 1267104491}
+  - component: {fileID: 1267104492}
   m_Layer: 0
   m_Name: Card 1 Temporal
   m_TagString: Untagged
@@ -32,6 +34,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267104491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538931856673454698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d18af86fca1f04c936fbd4ea32f3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attach_object_old: {fileID: 0}
+  attach_objects:
+  - {fileID: 2048080924295651722}
+  original_origin: {x: 0, y: 0, z: 0}
+  spawn_position: {fileID: 0}
+  mainCollider: {fileID: 0}
+  effects: []
+  eventSounds: []
+--- !u!114 &1267104492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538931856673454698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846c62c9f92adcb48a528efced2bc8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8535294602949361459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663575395118136428, guid: 00f31a824df5dc84dad99eda720d2ffb,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6314707172378724687, guid: 00f31a824df5dc84dad99eda720d2ffb,
         type: 3}
@@ -157,13 +196,19 @@ PrefabInstance:
     - target: {fileID: 7646913739618229945, guid: 00f31a824df5dc84dad99eda720d2ffb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f31a824df5dc84dad99eda720d2ffb, type: 3}
 --- !u!4 &1531572671756447827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7147854735669186400, guid: 00f31a824df5dc84dad99eda720d2ffb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8535294602949361459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2048080924295651722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7646913739618229945, guid: 00f31a824df5dc84dad99eda720d2ffb,
     type: 3}
   m_PrefabInstance: {fileID: 8535294602949361459}
   m_PrefabAsset: {fileID: 0}
