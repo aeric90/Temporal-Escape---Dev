@@ -12,6 +12,9 @@ public class TemporalController : MonoBehaviourPun
     public static TemporalController instance;
     MailboxController mailbox = null;  // Holds the current object's mailbox object
 
+    public int player_1_room = 0;
+    public int player_2_room = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +56,30 @@ public class TemporalController : MonoBehaviourPun
         new_message.Close_Tags();
         new_message.Date_Time = DateTime.Now.ToString();
         mailbox.Send_To_Sequence(new_message);
+    }
+
+    public int GetPlayer1RoomID() 
+    {
+        if (player_1_room == 0) {
+            System.Random rnd = new System.Random();
+
+            player_1_room = rnd.Next(1, 3);
+        }
+        return player_1_room;
+    }
+
+    public int GetPlayer2RoomID()
+    {
+        if (player_1_room == 0) GetPlayer1RoomID();
+        if (player_1_room == 1) player_2_room = 2;
+        if (player_1_room == 2) player_2_room = 1;
+
+        return player_2_room;
+    }
+
+    public void ClearRoomID(int roomID)
+    {
+        if(player_1_room == roomID) player_1_room = 0;
+        if(player_2_room == roomID) player_2_room = 0;
     }
 }

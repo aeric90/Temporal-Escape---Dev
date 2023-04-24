@@ -29,6 +29,9 @@ public class TemporalEscapeController : MonoBehaviour
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
         if (instance == null) instance = this;
         active_room = Instantiate(rooms[0]);
+        // Changing setup so that there is only one menu room. The program will decide which 
+        // room to chose between the two, instead of the build.
+        /*
         switch (startingRoom)
         {
             case GAME_TYPE.PAST:
@@ -38,6 +41,7 @@ public class TemporalEscapeController : MonoBehaviour
                 MenuRoomController.instance.SetFutureMenu();
                 break;
         }
+        */
     }
 
     // Update is called once per frame
@@ -108,6 +112,7 @@ public class TemporalEscapeController : MonoBehaviour
         {
             if (NetworkController.instance.GetPlayerCount() != 2)
             {
+                if (room_id == 0) room_id = TemporalController.instance.GetPlayer1RoomID();
                 statusText = "Waiting for player 2";
                 for (int i = 0; i < loopCount; i++)
                 {
@@ -120,18 +125,19 @@ public class TemporalEscapeController : MonoBehaviour
             }
             else
             {
+                if (room_id == 0) room_id = TemporalController.instance.GetPlayer2RoomID();
                 statusText = "Enjoy your escape!";
                 StartCoroutine(SwitchRoomRoutine(room_id));
                 break;
             }
         }
         yield return new WaitForSeconds(1.0f);
+
         if (!NetworkController.instance.InRoom())
         {
             statusText = "Cancelling connection...";
+
             yield return new WaitForSeconds(1.0f);
-            statusText = "Select an option";
-        } else {
             statusText = "Select an option";
         }
     }
@@ -148,6 +154,7 @@ public class TemporalEscapeController : MonoBehaviour
         switch(room_id)
         {
             case 0:
+                /*
                 switch (startingRoom)
                 {
                     case GAME_TYPE.PAST:
@@ -157,6 +164,7 @@ public class TemporalEscapeController : MonoBehaviour
                         MenuRoomController.instance.SetFutureMenu();
                         break;
                 }
+                */
                 break;
             case 1:
                 active_room.gameObject.name = "Past Room";
