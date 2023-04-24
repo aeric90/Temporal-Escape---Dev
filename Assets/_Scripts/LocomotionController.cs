@@ -16,6 +16,7 @@ public class LocomotionController : MonoBehaviour
 
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshold = 0.1f;
+    public bool temporalTesting = false;
 
     private TeleportationProvider teleportationProvider;
 
@@ -66,75 +67,78 @@ public class LocomotionController : MonoBehaviour
             }
         }
 
-        InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
-        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool openFireplace, activationThreshold);
-        InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool openSecretDoor, activationThreshold);
-
-        if (temporalSpoofA)
+        if (temporalTesting)
         {
-            switch (i)
+            InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool temporalSpoofA, activationThreshold);
+            InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.PrimaryButton, out bool openFireplace, activationThreshold);
+            InputHelpers.IsPressed(leftInteractionRay.inputDevice, InputHelpers.Button.SecondaryButton, out bool openSecretDoor, activationThreshold);
+
+            if (temporalSpoofA)
             {
-                case 0:
-                    TemporalController.instance.Network_Event("Key Pick Up");
-                    break;
-                case 1:
-                    TemporalController.instance.Network_Event("Wall Smash");
-                    break;
-                case 2:
-                    TemporalController.instance.Network_Event("Eyeball Send");
-                    break;
-                case 3:
-                    TemporalController.instance.Network_Event("Past Escape");
-                    break;
-                case 4:
-                    TemporalController.instance.Network_Event("Desk Drawer Open");
-                    break;
-                default:
-                    break;
+                switch (i)
+                {
+                    case 0:
+                        TemporalController.instance.Network_Event("Key Pick Up");
+                        break;
+                    case 1:
+                        TemporalController.instance.Network_Event("Wall Smash");
+                        break;
+                    case 2:
+                        TemporalController.instance.Network_Event("Eyeball Send");
+                        break;
+                    case 3:
+                        TemporalController.instance.Network_Event("Past Escape");
+                        break;
+                    case 4:
+                        TemporalController.instance.Network_Event("Desk Drawer Open");
+                        break;
+                    default:
+                        break;
+                }
+
+                i++;
+                temporalSpoofA = false;
             }
 
-            i++;
-            temporalSpoofA = false;
-        }
+            if (openFireplace && !firePlaceOpen)
+            {
+                MessageObject new_message = new MessageObject("Book Lock");
+                new_message.Add_Message_Tag("Status", "Unlock");
+                new_message.Close_Tags();
+                new_message.Date_Time = DateTime.Now.ToString();
+                mailbox.Send_To_Sequence(new_message);
 
-        if(openFireplace && !firePlaceOpen)
-        {
-            MessageObject new_message = new MessageObject("Book Lock");
-            new_message.Add_Message_Tag("Status", "Unlock");
-            new_message.Close_Tags();
-            new_message.Date_Time = DateTime.Now.ToString();
-            mailbox.Send_To_Sequence(new_message);
+                new_message = new MessageObject("Laptop Lock");
+                new_message.Add_Message_Tag("Status", "Unlock");
+                new_message.Close_Tags();
+                new_message.Date_Time = DateTime.Now.ToString();
+                mailbox.Send_To_Sequence(new_message);
 
-            new_message = new MessageObject("Laptop Lock");
-            new_message.Add_Message_Tag("Status", "Unlock");
-            new_message.Close_Tags();
-            new_message.Date_Time = DateTime.Now.ToString();
-            mailbox.Send_To_Sequence(new_message);
+                firePlaceOpen = true;
+            }
 
-            firePlaceOpen= true;
-        }
+            if (openSecretDoor && !secretDoorOpen)
+            {
+                MessageObject new_message = new MessageObject("Strange Lock");
+                new_message.Add_Message_Tag("Status", "Unlock");
+                new_message.Close_Tags();
+                new_message.Date_Time = DateTime.Now.ToString();
+                mailbox.Send_To_Sequence(new_message);
 
-        if(openSecretDoor && !secretDoorOpen)
-        {
-            MessageObject new_message = new MessageObject("Strange Lock");
-            new_message.Add_Message_Tag("Status", "Unlock");
-            new_message.Close_Tags();
-            new_message.Date_Time = DateTime.Now.ToString();
-            mailbox.Send_To_Sequence(new_message);
+                new_message = new MessageObject("Retinal Scanner");
+                new_message.Add_Message_Tag("Grab Object", "Eyeball In A Jar");
+                new_message.Close_Tags();
+                new_message.Date_Time = DateTime.Now.ToString();
+                mailbox.Send_To_Sequence(new_message);
 
-            new_message = new MessageObject("Retinal Scanner");
-            new_message.Add_Message_Tag("Grab Object", "Eyeball In A Jar");
-            new_message.Close_Tags();
-            new_message.Date_Time = DateTime.Now.ToString();
-            mailbox.Send_To_Sequence(new_message);
+                new_message = new MessageObject("Retinal Scanner");
+                new_message.Add_Message_Tag("Grab Object", "Retinal Scanner ID Card");
+                new_message.Close_Tags();
+                new_message.Date_Time = DateTime.Now.ToString();
+                mailbox.Send_To_Sequence(new_message);
 
-            new_message = new MessageObject("Retinal Scanner");
-            new_message.Add_Message_Tag("Grab Object", "Retinal Scanner ID Card");
-            new_message.Close_Tags();
-            new_message.Date_Time = DateTime.Now.ToString();
-            mailbox.Send_To_Sequence(new_message);
-
-            secretDoorOpen = true;
+                secretDoorOpen = true;
+            }
         }
 
         InputHelpers.IsPressed(rightInteractionRay.inputDevice, InputHelpers.Button.Primary2DAxisClick, out bool leftReturnAll, activationThreshold);

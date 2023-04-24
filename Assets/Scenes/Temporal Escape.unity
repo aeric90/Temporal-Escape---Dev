@@ -536,9 +536,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2623433431566235588, guid: ba91456c78f4c6442b716a072e2f2966,
         type: 3}
+      propertyPath: testing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623433431566235588, guid: ba91456c78f4c6442b716a072e2f2966,
+        type: 3}
       propertyPath: xrOrigin
       value: 
       objectReference: {fileID: 4040573897405151873}
+    - target: {fileID: 2623433431566235588, guid: ba91456c78f4c6442b716a072e2f2966,
+        type: 3}
+      propertyPath: startingRoom
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba91456c78f4c6442b716a072e2f2966, type: 3}
 --- !u!1001 &1331134928

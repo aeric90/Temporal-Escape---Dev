@@ -1190,8 +1190,6 @@
 					</MessageTag>
 				</Message_Tags>
 			</MessageTrigger>
-		</Messages_Out>
-		<Messages_Out>
 			<MessageTrigger>
 				<Message_Mailbox>Blood Text</Message_Mailbox>
 				<Message_Tags>
@@ -1205,8 +1203,6 @@
 					</MessageTag>
 				</Message_Tags>
 			</MessageTrigger>
-		</Messages_Out>
-    		<Messages_Out>
 			<MessageTrigger>
 				<Message_Mailbox>Secret Room Button</Message_Mailbox>
 				<Message_Tags>
@@ -1287,8 +1283,12 @@
           </MessageTag>
         </Message_Tags>
       </Message_In>
-      <Tags_Excluded/>
-      <Tags_On/>
+      <Tags_Excluded>
+        <string>Exit Pressed</string>
+      </Tags_Excluded>
+      <Tags_On>
+        <string>Exit Pressed</string>
+      </Tags_On>
       <Messages_Out>
         <MessageTrigger>
           <Message_Mailbox>Temporal Escape Controller</Message_Mailbox>

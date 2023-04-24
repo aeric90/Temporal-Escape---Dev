@@ -125,8 +125,8 @@ public class TemporalEscapeController : MonoBehaviour
                 break;
             }
         }
-
-        if(!NetworkController.instance.InRoom())
+        yield return new WaitForSeconds(1.0f);
+        if (!NetworkController.instance.InRoom())
         {
             statusText = "Cancelling connection...";
             yield return new WaitForSeconds(1.0f);
