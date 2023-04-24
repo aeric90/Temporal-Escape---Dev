@@ -79,6 +79,12 @@ public class TemporalEscapeController : MonoBehaviour
         if(testing) StartCoroutine(SwitchRoomRoutine(room_id));
     }
 
+    public void SwitchRoom()
+    {
+        if (!testing) StartCoroutine(WaitForPlayers());
+        if (testing) StartCoroutine(SwitchRoomRoutine(room_id));
+    }
+
     public void CancelConnect()
     {
         NetworkController.instance.LeaveRoom();

@@ -20,7 +20,7 @@ public class MenuUIController : MonoBehaviour
     {
         if (roomClicked == false)
         {
-            TemporalEscapeController.instance.SwitchRoom("Past Room");
+            TemporalEscapeController.instance.SwitchRoom();
             if (buttonText != null) buttonText.text = "Cancel";
             roomClicked = true;
         } else
@@ -35,7 +35,7 @@ public class MenuUIController : MonoBehaviour
     {
         if (roomClicked == false)
         {
-            TemporalEscapeController.instance.SwitchRoom("Future Room");
+            TemporalEscapeController.instance.SwitchRoom();
             if (buttonText != null) buttonText.text = "Cancel";
             roomClicked = true;
         }
