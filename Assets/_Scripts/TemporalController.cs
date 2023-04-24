@@ -60,6 +60,7 @@ public class TemporalController : MonoBehaviourPun
 
     public int GetPlayer1RoomID() 
     {
+        Debug.Log("Setting Player 1 Room");
         if (player_1_room == 0) {
             System.Random rnd = new System.Random();
 
@@ -70,6 +71,7 @@ public class TemporalController : MonoBehaviourPun
 
     public int GetPlayer2RoomID()
     {
+        Debug.Log("Setting Player 2 Room");
         if (player_1_room == 0) GetPlayer1RoomID();
         if (player_1_room == 1) player_2_room = 2;
         if (player_1_room == 2) player_2_room = 1;
