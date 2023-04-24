@@ -628,6 +628,16 @@ PrefabInstance:
       propertyPath: Synchronization
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9129803309702144112, guid: c6f2f92610f056e4e951edca5c765329,
+        type: 3}
+      propertyPath: observableSearch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129803309702144112, guid: c6f2f92610f056e4e951edca5c765329,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f2f92610f056e4e951edca5c765329, type: 3}
 --- !u!1001 &4040573897405151872
