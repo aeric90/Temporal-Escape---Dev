@@ -118,7 +118,7 @@ public class TemporalEscapeController : MonoBehaviour
         {
             if (NetworkController.instance.GetPlayerCount() != 2)
             {
-                if (room_id == 0) room_id = TemporalController.instance.GetPlayer1RoomID();
+                if (room_id == 0) room_id = 1;
                 statusText = "Waiting for player 2";
                 for (int i = 0; i < loopCount; i++)
                 {
@@ -131,7 +131,7 @@ public class TemporalEscapeController : MonoBehaviour
             }
             else
             {
-                if (room_id == 0) room_id = TemporalController.instance.GetPlayer2RoomID();
+                if (room_id == 0) room_id = 1;
                 statusText = "Enjoy your escape!";
                 StartCoroutine(SwitchRoomRoutine(room_id));
                 break;
@@ -142,7 +142,7 @@ public class TemporalEscapeController : MonoBehaviour
         if (!NetworkController.instance.InRoom())
         {
             statusText = "Cancelling connection...";
-
+            room_id = 0;
             yield return new WaitForSeconds(1.0f);
             statusText = "Select an option";
         }

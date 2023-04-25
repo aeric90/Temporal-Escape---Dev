@@ -7,7 +7,7 @@ using System;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class TemporalController : MonoBehaviourPun, IPunObservable
+public class TemporalController : MonoBehaviourPun
 {
     public static TemporalController instance;
     MailboxController mailbox = null;  // Holds the current object's mailbox object
@@ -20,22 +20,6 @@ public class TemporalController : MonoBehaviourPun, IPunObservable
     {
         if (instance == null) instance = this;
         mailbox = this.GetComponent<MailboxController>(); // Initialize the mailbox object.
-    }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            // We own this player: send the others our data
-            stream.SendNext(player_1_room);
-            stream.SendNext(player_2_room);
-        }
-        else
-        {
-            // Network player, receive data
-            this.player_1_room = (int)stream.ReceiveNext();
-            this.player_2_room = (int)stream.ReceiveNext();
-        }
     }
 
     // Update is called once per frame
@@ -72,6 +56,12 @@ public class TemporalController : MonoBehaviourPun, IPunObservable
         new_message.Close_Tags();
         new_message.Date_Time = DateTime.Now.ToString();
         mailbox.Send_To_Sequence(new_message);
+    }
+
+    [PunRPC]
+    public void SetPlayerRooms()
+    {
+
     }
 
     public int GetPlayer1RoomID() 
