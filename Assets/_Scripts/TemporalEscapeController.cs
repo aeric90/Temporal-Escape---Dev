@@ -131,7 +131,7 @@ public class TemporalEscapeController : MonoBehaviour
             }
             else
             {
-                if (room_id == 0) room_id = 1;
+                if (room_id == 0) room_id = 2;
                 statusText = "Enjoy your escape!";
                 StartCoroutine(SwitchRoomRoutine(room_id));
                 break;
